@@ -7,10 +7,12 @@ function RenderHome(){
         <div >
             <ResponsiveAppBar/>
             <Grid container sx={{backgroundColor:"F7EDE4"}}>
-                <Grid xs={6}>
-                    <img alt="main.image"></img>
+                <Grid xs={12} md={6}>
+                    <Item><img src="../resources/images/main.jpg"/></Item>
                 </Grid>
-                <Grid xs={6}></Grid>
+                <Grid xs={12} md={6}>
+                    <Item></Item>
+                </Grid>
             </Grid>
         </div>
     );

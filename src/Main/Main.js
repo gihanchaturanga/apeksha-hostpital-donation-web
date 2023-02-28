@@ -3,6 +3,7 @@ import ResponsiveAppBar from "../top_nav/TopNav";
 import Grid from '@mui/material/Grid';
 
 function RenderHome(){
+    
     return(
         <div >
             <ResponsiveAppBar/>

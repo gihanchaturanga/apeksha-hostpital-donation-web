@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
   return (
     <div>
       <AppBar position="static">
-        <Container maxWidth="xl" className="topNav">
+        <Container maxWidth="false" className="topNav">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
             <Typography
@@ -157,8 +157,9 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box> */}
-            <Box sx={{ flexGrow: 0, color: "black" }} className="log_btn_box">
-              <Button>Log in</Button>
+            <Box 
+            sx={{ flexGrow: 0 }} className="log_btn_box">
+              <Button sx={{ color: "black", mx: "10px" }}>Log in</Button>
             </Box>
           </Toolbar>
         </Container>

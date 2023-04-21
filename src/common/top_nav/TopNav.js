@@ -12,7 +12,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import logo from '../../resources/logo/VolunteerSL(white).png'
+import logo from "../../resources/logo/VolunteerSL(white).png";
+import './TopNav.css'
 
 import "./TopNav.css";
 import { useLocation } from "react-router-dom";
@@ -25,7 +26,7 @@ function ResponsiveAppBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const location = useLocation();
-  console.log(location.pathname)
+  console.log(location.pathname);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -47,7 +48,11 @@ function ResponsiveAppBar() {
       <AppBar position="static">
         <Container maxWidth="false" className="topNav">
           <Toolbar disableGutters>
-            <img className="Main-logo" src={logo} sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}/>
+            <img
+              id="main-logo"
+              src={logo}
+              alt="Volunteer Logo"
+            />
             {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
             <Typography
               variant="h6"
@@ -126,15 +131,17 @@ function ResponsiveAppBar() {
               VOLUNTEER SL
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {(location.pathname !== "/")?pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
-              )):null}
+              {location.pathname !== "/"
+                ? pages.map((page) => (
+                    <Button
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: "white", display: "block" }}
+                    >
+                      {page}
+                    </Button>
+                  ))
+                : null}
             </Box>
 
             {/* <Box sx={{ flexGrow: 0 }}>

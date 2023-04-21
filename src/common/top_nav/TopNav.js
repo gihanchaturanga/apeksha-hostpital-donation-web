@@ -14,14 +14,15 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "../../resources/logo/VolunteerSL(white).png";
 import "./TopNav.css";
-
-import "./TopNav.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const pages = ["Gallery", "Upcomming Events", "Appendix"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
+
+  const nav = useNavigate();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -174,7 +175,14 @@ function ResponsiveAppBar() {
             </Menu>
           </Box> */}
             <Box sx={{ flexGrow: 0 }} className="log_btn_box">
-              <Button sx={{ color: "black", mx: "10px" }}>Log in</Button>
+              <Button
+                sx={{ color: "black", mx: "10px" }}
+                onClick={() => {
+                  nav("/login");
+                }}
+              >
+                Log in
+              </Button>
             </Box>
           </Toolbar>
         </Container>

@@ -13,12 +13,12 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "../../resources/logo/VolunteerSL(white).png";
-import './TopNav.css'
+import "./TopNav.css";
 
 import "./TopNav.css";
 import { useLocation } from "react-router-dom";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Gallery", "Upcomming Events", "Appendix"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -52,8 +52,8 @@ function ResponsiveAppBar() {
               id="main-logo"
               src={logo}
               alt="Volunteer Logo"
+              className="logo-1"
             />
-            {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
@@ -101,17 +101,19 @@ function ResponsiveAppBar() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {location.pathname !== "/"
-                  ? pages.map((page) => (
-                      <MenuItem key={page} onClick={handleCloseNavMenu}>
-                        <Typography textAlign="center">{page}</Typography>
-                      </MenuItem>
-                    ))
-                  : null}
+                {pages.map((page) => (
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                ))}
               </Menu>
             </Box>
-            {/* Logo for mobile and tablet view */}
-            {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+            <img
+              id="main-logo"
+              src={logo}
+              alt="Volunteer Logo"
+              className="logo-2"
+            />
             <Typography
               variant="h5"
               noWrap
@@ -119,7 +121,6 @@ function ResponsiveAppBar() {
               href=""
               sx={{
                 mr: 2,
-                display: { xs: "flex", md: "none" },
                 flexGrow: 1,
                 fontFamily: "monospace",
                 fontWeight: 700,
@@ -127,21 +128,20 @@ function ResponsiveAppBar() {
                 color: "inherit",
                 textDecoration: "none",
               }}
+              className="site-text"
             >
-              VOLUNTEER SL
+              Volunteer SL
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {location.pathname !== "/"
-                ? pages.map((page) => (
-                    <Button
-                      key={page}
-                      onClick={handleCloseNavMenu}
-                      sx={{ my: 2, color: "white", display: "block" }}
-                    >
-                      {page}
-                    </Button>
-                  ))
-                : null}
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page}
+                </Button>
+              ))}
             </Box>
 
             {/* <Box sx={{ flexGrow: 0 }}>

@@ -10,3 +10,27 @@
     background-color: #F7EDE4;
     border-radius: 8px;
 }
+
+@media (max-width: 900px) {
+    .logo-1{
+        display: none;
+    }
+}
+
+@media (min-width: 900px) {
+    .logo-2{
+        display: none;
+    }
+    .site-text{
+        display: none;
+    }
+}
+
+@media (max-width: 440px) {
+    .site-text{
+        display: none;
+    }
+    .logo-2{
+        align-self: center;
+    }
+}

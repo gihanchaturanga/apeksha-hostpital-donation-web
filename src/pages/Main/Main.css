@@ -2,11 +2,11 @@
     height: 100vh;
     display: flex;
     flex-flow: column;
+    background-color: #F6EDE4;
 }
 
 .body-container{
     flex-grow: 1;
-    background-color: #F6EDE4;
 }
 
 .bg-img{
@@ -22,4 +22,27 @@
 .text-box{
     justify-content: center; 
     align-items: center;
+}
+
+#donate-btn{
+    border-color:#4C3B2B; 
+    color:#4C3B2B;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .bg-img{
+        background-size: cover;
+        height: 40%;
+    }
+
+    .body-container{
+        display: block;
+    }
+
+    .text-box{
+        margin: 0%;
+        padding: 0%;
+    }
 }

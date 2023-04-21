@@ -1,13 +1,16 @@
 .main-container{
-    height: 100vw;
-    width: 100vw;
-    border: 5px solid black;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
 }
 
 .body-container{
-    width: 500px;
-    height: 500px;
-    border: 5px solid black;
+    flex-grow: 1;
+    background-color: #F6EDE4;
+}
+
+.bg-img{
+    background-image: url("../../resources/images/main.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

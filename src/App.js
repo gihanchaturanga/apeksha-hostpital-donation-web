@@ -1,13 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ResponsiveAppBar from './top_nav/TopNav';
+import React from "react";
+import "./App.css";
+import ResponsiveAppBar from "./common/top_nav/TopNav";
+import { BrowserRouter as Nav } from "react-router-dom";
 
-import RenderHome from './Main/Main';
+import { RouteConfig } from "./utils/RouteConfig";
 
 function App() {
   return (
-    <RenderHome/>
+    <Nav>
+      <RouteConfig />
+    </Nav>
   );
 }
 

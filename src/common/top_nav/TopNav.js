@@ -12,8 +12,10 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import logo from '../../resources/logo/VolunteerSL(white).png'
 
 import "./TopNav.css";
+import { useLocation } from "react-router-dom";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -21,6 +23,9 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const location = useLocation();
+  console.log(location.pathname)
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -42,7 +47,8 @@ function ResponsiveAppBar() {
       <AppBar position="static">
         <Container maxWidth="false" className="topNav">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <img className="Main-logo" src={logo} sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}/>
+            {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
@@ -58,7 +64,7 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              Volunteer Sri Lanka
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -90,14 +96,17 @@ function ResponsiveAppBar() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
+                {location.pathname !== "/"
+                  ? pages.map((page) => (
+                      <MenuItem key={page} onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">{page}</Typography>
+                      </MenuItem>
+                    ))
+                  : null}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            {/* Logo for mobile and tablet view */}
+            {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
             <Typography
               variant="h5"
               noWrap
@@ -114,10 +123,10 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              VOLUNTEER SL
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
+              {(location.pathname !== "/")?pages.map((page) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -125,7 +134,7 @@ function ResponsiveAppBar() {
                 >
                   {page}
                 </Button>
-              ))}
+              )):null}
             </Box>
 
             {/* <Box sx={{ flexGrow: 0 }}>
@@ -157,8 +166,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box> */}
-            <Box 
-            sx={{ flexGrow: 0 }} className="log_btn_box">
+            <Box sx={{ flexGrow: 0 }} className="log_btn_box">
               <Button sx={{ color: "black", mx: "10px" }}>Log in</Button>
             </Box>
           </Toolbar>

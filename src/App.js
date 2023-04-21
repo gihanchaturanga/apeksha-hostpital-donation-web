@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './home/Home';
+import NewSelect from './common/Select/NewSelect';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<NewSelect label={'new label'} err></NewSelect>}/>
       </Routes>
     </BrowserRouter>
   );

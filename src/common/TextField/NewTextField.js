@@ -22,7 +22,7 @@ const NewTextField = (props) => {
 
   return (
     <>
-      <Box width={350}>
+      <Box marginBottom={1.5}>
         <FormControl fullWidth>
             <TextField
                 id={props.id}

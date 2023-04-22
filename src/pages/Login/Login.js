@@ -17,13 +17,16 @@ export const Login = () => {
             <h1>Welcome!</h1>
             <p>This login is for Volunteer members only.</p>
           </div>
-          <Box sx={{width:'100%', paddingRight: 15}}>
+          <Box
+            sx={{ width: "100%", paddingRight: 15 }}
+            xs={{ paddingRight: 0 }}
+          >
             <NewTextField
-                label="E-mail"
-                id="email"
-                placeholder="abc@gmail.com"
-                name="email"
-              />
+              label="E-mail"
+              id="email"
+              placeholder="abc@gmail.com"
+              name="email"
+            />
             <NewTextField
               label="Password"
               id="password"

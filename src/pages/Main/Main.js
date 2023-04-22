@@ -5,7 +5,7 @@ import { Grid, Button } from "@mui/material";
 
 function RenderHome() {
   return (
-    <div container direction="column" className="main-container">
+    <div container direction="column" className="outer-container">
       <ResponsiveAppBar />
       <Grid container xs={12} className="body-container">
         <Grid item xs={12} sm={7} md={8} className="bg-img"></Grid>

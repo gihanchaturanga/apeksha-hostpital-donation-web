@@ -40,7 +40,6 @@ export const Login = () => {
           </Box>
           <div className="login-field">
             <Button
-              variant="contained"
               sx={{
                 width: "100px",
                 backgroundColor: "#4C3B2BF0",

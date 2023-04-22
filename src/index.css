@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "ItimRegular";
+    src: local("ItimRegular"),
+    url("./resources/fonts/Itim/Itim-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ItimBold";
+    src: local("ItimBold"),
+    url("./resources/fonts/Itim/Itim-Regular.ttf") format("truetype");
+    font-weight: bold;
+}

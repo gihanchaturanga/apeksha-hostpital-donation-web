@@ -53,7 +53,7 @@ export const Login = () => {
       <Box
         item
         component={Grid}
-        display={{xs:"none", md:"block"}}
+        display={{ xs: "none", md: "block" }}
         md
         className="grid-item"
         sx={{

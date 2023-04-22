@@ -17,17 +17,13 @@ export const Login = () => {
             <h1>Welcome!</h1>
             <p>This login is for Volunteer members only.</p>
           </div>
-          <div className="login-field">
-            {/* <label htmlFor="email">E-mail</label> */}
+          <Box sx={{width:'100%', paddingRight: 15}}>
             <NewTextField
-              label="E-mail"
-              id="email"
-              placeholder="abc@gmail.com"
-              name="email"
-            />
-          </div>
-          <div className="login-field">
-            {/* <label htmlFor="password">Password</label> */}
+                label="E-mail"
+                id="email"
+                placeholder="abc@gmail.com"
+                name="email"
+              />
             <NewTextField
               label="Password"
               id="password"
@@ -36,7 +32,7 @@ export const Login = () => {
               name="password"
             />
             <a href="xxxxx" style={{textDecoration:"none"}}>Forget Password?</a>
-          </div>
+          </Box>
           <div className="login-field">
             <Button
               variant="contained"
@@ -53,7 +49,7 @@ export const Login = () => {
         </div>
       </Grid>
       <Grid item xs={{ display: "none" }} md className="grid-item" sx={{paddingTop:"60px", paddingRight:"40px", backgroundColor:"#4C3B2BF0"}}>
-        <div className="img" display="inline-block"></div>
+        <div className="background-image" display="inline-block"></div>
       </Grid>
     </Grid>
   );

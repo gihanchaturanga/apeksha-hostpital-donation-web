@@ -37,7 +37,7 @@
 .grid-item {
 }
 
-.img {
+.background-image {
     height: 100%;
     width: 100%;
     background-image: url("../../resources/images/mobileBackground.jpg");
@@ -46,7 +46,7 @@
 }
 
 @media (max-width: 900px) {
-    .main-container {
+    .outer-container {
         background-image: url("../../resources/images/mobileBackground.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 400px) {
-    .main-container {
+    .outer-container {
         background-image: url("../../resources/images/mobileBackgroundResized.jpg");
         background-repeat: no-repeat;
         background-size: cover;

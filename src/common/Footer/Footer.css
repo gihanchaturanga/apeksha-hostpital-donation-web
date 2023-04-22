@@ -11,15 +11,9 @@
 }
 
 #footer-logo {
-    margin-top: 10px;
     height: 100px;
     width: 100px;
-}
-
-.flex-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 #subscribe_btn {
@@ -28,7 +22,7 @@
     border-radius: 4px;
 }
 
-#subscribe_btn:hover{
+#subscribe_btn:hover {
     background-color: white;
 }
 
@@ -46,10 +40,4 @@
 
 .links:hover {
     color: white;
-}
-
-@media (max-width: 600px) {
-    .flex-container{
-        flex-direction: column;
-    }
 }

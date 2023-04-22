@@ -47,38 +47,11 @@ export const Footer = () => {
             </Button>
           </div>
         </Grid>
-        <Grid
-          sx={{ m: "20px", mx: "40px" }}
-          flex="0.5"
-        >
-          <div className="flex-container">
-            <div>
-              <img
-                id="footer-logo"
-                src={logo}
-                alt="Volunteer Logo"
-                className="logo-1"
-              />
-            </div>
-            {/* <div>
-              <img
-                id="footer-logo"
-                src={logo}
-                alt="Volunteer Logo"
-                className="logo-1"
-              />
-            </div>
-            <div>
-              <img
-                id="footer-logo"
-                src={logo}
-                alt="Volunteer Logo"
-                className="logo-1"
-              />
-            </div> */}
-          </div>
-
+        <Grid sx={{ m: "20px", mx: "40px" }} flex="0.5">
           <div style={{ textAlign: "center", marginTop: "30px" }}>
+            <div>
+              <img id="footer-logo" src={logo} alt="Volunteer Logo" />
+            </div>
             <div>
               <Link to="https://www.facebook.com/volunteersrilanka.lk/?mibextid=ZbWKwL">
                 <img
@@ -115,6 +88,7 @@ export const Footer = () => {
               <Link to="" className="links">
                 About Us
               </Link>
+              <p style={{fontWeight:"bold"}}>MAMBEK Software Solutions</p>
               <p>Copyright © 2023</p>
             </div>
           </div>

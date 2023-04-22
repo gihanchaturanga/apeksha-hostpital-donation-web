@@ -1,4 +1,56 @@
-.container{
-    display: flex;
+.main-container {
     background-color: #F6EDE4;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+}
+
+.main-txt{
+    font-family: ItimBold;
+    font-size: 20px;
+}
+
+.login-section{
+    padding: 5px;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid blueviolet;
+    padding: auto;
+    align-items: start;
+}
+
+.login-field{
+    margin-top: 20px;
+}
+
+.grid-item {
+    border: 3px solid brown;
+}
+
+.img {
+    background-image: url("../../resources/images/loginPage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        background-image: url("../../resources/images/mobileBackground.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-container {
+        background-image: url("../../resources/images/mobileBackgroundResized.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }

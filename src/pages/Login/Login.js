@@ -17,10 +17,7 @@ export const Login = () => {
             <h1>Welcome!</h1>
             <p>This login is for Volunteer members only.</p>
           </div>
-          <Box
-            sx={{ width: "100%", paddingRight: 15 }}
-            xs={{ paddingRight: 0 }}
-          >
+          <Box sx={{ width: "100%", paddingRight: "30px" }}>
             <NewTextField
               label="E-mail"
               id="email"

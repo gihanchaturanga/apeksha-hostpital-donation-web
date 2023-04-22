@@ -17,13 +17,16 @@ export const Login = () => {
             <h1>Welcome!</h1>
             <p>This login is for Volunteer members only.</p>
           </div>
-          <Box sx={{width:'100%', paddingRight: 15}}>
+          <Box
+            sx={{ width: "100%", paddingRight: 15 }}
+            xs={{ paddingRight: 0 }}
+          >
             <NewTextField
-                label="E-mail"
-                id="email"
-                placeholder="abc@gmail.com"
-                name="email"
-              />
+              label="E-mail"
+              id="email"
+              placeholder="abc@gmail.com"
+              name="email"
+            />
             <NewTextField
               label="Password"
               id="password"
@@ -31,8 +34,10 @@ export const Login = () => {
               placeholder="Your Password"
               name="password"
             />
-            <a href="xxxxx" style={{textDecoration:"none"}}>Forget Password?</a>
-          </div>
+            <a href="xxxxx" style={{ textDecoration: "none" }}>
+              Forget Password?
+            </a>
+          </Box>
           <div className="login-field">
             <Button
               sx={{
@@ -47,9 +52,10 @@ export const Login = () => {
           </div>
         </div>
       </Grid>
-      <Grid
+      <Box
         item
-        xs={{ display: "none" }}
+        component={Grid}
+        display={{xs:"none"}}
         md
         className="grid-item"
         sx={{
@@ -59,7 +65,7 @@ export const Login = () => {
         }}
       >
         <div className="background-image" display="inline-block"></div>
-      </Grid>
+      </Box>
     </Grid>
   );
 };

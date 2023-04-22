@@ -38,7 +38,6 @@ export const Login = () => {
           </Box>
           <div className="login-field">
             <Button
-              variant="contained"
               sx={{
                 width: "100px",
                 backgroundColor: "#4C3B2BF0",
@@ -51,7 +50,18 @@ export const Login = () => {
           </div>
         </div>
       </Grid>
-      <Grid item xs={{ display: "none" }} md className="grid-item" sx={{paddingTop:"60px", paddingRight:"40px", backgroundColor:"#4C3B2BF0"}}>
+      <Box
+        item
+        component={Grid}
+        display={{xs:"none", md:"block"}}
+        md
+        className="grid-item"
+        sx={{
+          paddingTop: "60px",
+          paddingRight: "40px",
+          backgroundColor: "#4C3B2BF0",
+        }}
+      >
         <div className="background-image" display="inline-block"></div>
       </Grid>
     </Grid>

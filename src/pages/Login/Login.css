@@ -7,26 +7,33 @@
     height: 60px;
 }
 
-.main-txt{
+.main-txt {
     font-family: ItimBold;
     font-size: 20px;
 }
 
-.login-section{
+.login-section {
     padding: 5px;
     height: 100%;
 }
 
-.container {
+.header-container {
+    border: 3px solid blueviolet;
+}
+
+.field-container {
+    height: 80%;
     display: flex;
     flex-direction: column;
     border: 3px solid blueviolet;
-    padding: auto;
+    justify-content: center;
     align-items: start;
+    padding-left: 30px;
 }
 
-.login-field{
-    margin-top: 20px;
+.login-field {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .grid-item {
@@ -34,7 +41,7 @@
 }
 
 .img {
-    background-image: url("../../resources/images/loginPage.jpg");
+    background-image: url("../../resources/images/mobileBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

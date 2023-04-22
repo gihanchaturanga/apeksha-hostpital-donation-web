@@ -8,9 +8,15 @@ export const Login = () => {
   return (
     <Grid container direction="row" className="main-container">
       <Grid item xs={12} md={5} className="login-section grid-item">
-        <img id="logo" src={logo} alt="Volunteer Logo" />
-        <span className="main-txt">Volunteer Sri Lanka</span>
-        <div className="container">
+        <div className="header-container">
+          <img id="logo" src={logo} alt="Volunteer Logo" />
+          <span className="main-txt">Volunteer Sri Lanka</span>
+        </div>
+        <div className="field-container">
+          <div className="login-field">
+            <h1>Welcome!</h1>
+            <p>This login is for Volunteer members only.</p>
+          </div>
           <div className="login-field">
             {/* <label htmlFor="email">E-mail</label> */}
             <NewTextField
@@ -30,12 +36,19 @@ export const Login = () => {
               name="password"
             />
           </div>
-          <Button
-            variant="contained"
-            sx={{ backgroundColor: "#4C3B2BF0", color: "#F6EDE4" }}
-          >
-            Login
-          </Button>
+          <div className="login-field">
+            <Button
+              variant="contained"
+              sx={{
+                width: "100px",
+                backgroundColor: "#4C3B2BF0",
+                color: "#F6EDE4",
+                marginBottom: "20px",
+              }}
+            >
+              Login
+            </Button>
+          </div>
         </div>
       </Grid>
       <Grid item xs={{ display: "none" }} md className="img grid-item"></Grid>

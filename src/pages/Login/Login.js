@@ -6,7 +6,7 @@ import logo from "../../resources/logo/VolunteerSL(dark).png";
 
 export const Login = () => {
   return (
-    <Grid container direction="row" className="main-container">
+    <Grid container direction="row" className="outer-container">
       <Grid item xs={12} md={5} className="login-section grid-item">
         <div className="header-container">
           <img id="logo" src={logo} alt="Volunteer Logo" />
@@ -35,11 +35,12 @@ export const Login = () => {
               placeholder="Your Password"
               name="password"
             />
-            <a href="xxxxx" style={{textDecoration:"none"}}>Forget Password?</a>
+            <a href="xxxxx" style={{ textDecoration: "none" }}>
+              Forget Password?
+            </a>
           </div>
           <div className="login-field">
             <Button
-              variant="contained"
               sx={{
                 width: "100px",
                 backgroundColor: "#4C3B2BF0",
@@ -52,7 +53,17 @@ export const Login = () => {
           </div>
         </div>
       </Grid>
-      <Grid item xs={{ display: "none" }} md className="grid-item" sx={{paddingTop:"60px", paddingRight:"40px", backgroundColor:"#4C3B2BF0"}}>
+      <Grid
+        item
+        xs={{ display: "none" }}
+        md
+        className="grid-item"
+        sx={{
+          paddingTop: "60px",
+          paddingRight: "40px",
+          backgroundColor: "#4C3B2BF0",
+        }}
+      >
         <div className="background-image" display="inline-block"></div>
       </Grid>
     </Grid>

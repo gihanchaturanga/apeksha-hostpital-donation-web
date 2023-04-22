@@ -9,8 +9,14 @@
 }
 
 .main-txt {
+    text-decoration: none;
+    color: black;
     font-family: ItimBold;
     font-size: 20px;
+}
+
+.main-txt:hover{
+    color: #4C3B2BF0;
 }
 
 .login-section {
@@ -57,7 +63,7 @@
 
     .field-container {
         margin-top: 10px;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(246, 237, 228, 0.7);
         border-radius: 8px;
     }
 }
@@ -74,6 +80,6 @@
     }
 
     .field-container {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(246, 237, 228, 0.7);
     }
 }

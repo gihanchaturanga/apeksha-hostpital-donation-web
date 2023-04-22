@@ -1,0 +1,55 @@
+.footer-container {
+    background-color: #4C3B2BF0;
+    color: white;
+}
+
+.brand-footer {
+    font-family: "ItimBold";
+    font-weight: 900;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+#footer-logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#subscribe_btn {
+    margin-top: 10px;
+    background-color: #F7EDE4;
+    border-radius: 4px;
+}
+
+#subscribe_btn:hover{
+    background-color: white;
+}
+
+.logo-social {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+
+.links {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #F7EDE4;
+}
+
+.links:hover {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .flex-container{
+        flex-direction: column;
+    }
+}

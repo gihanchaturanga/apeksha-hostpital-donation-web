@@ -14,9 +14,9 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "../../resources/logo/VolunteerSL(white).png";
 import "./TopNav.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
-const pages = ["Gallery", "Upcomming Events", "Appendix"];
+const pages = ["Campaigns", "Donate", "Gallery", "About Us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -106,7 +106,7 @@ function ResponsiveAppBar() {
                   <MenuItem
                     key={page}
                     onClick={() => {
-                      nav("/login");
+                      nav("/gallery");
                     }}
                   >
                     <Typography textAlign="center">{page}</Typography>
@@ -114,12 +114,13 @@ function ResponsiveAppBar() {
                 ))}
               </Menu>
             </Box>
+            <Link to="/">
             <img
               id="main-logo"
               src={logo}
               alt="Volunteer Logo"
               className="logo-2"
-            />
+            /></Link>
             <Typography
               variant="h5"
               noWrap

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import ResponsiveAppBar from '../../common/top_nav/TopNav';
+import ResponsiveAppBar from '../../common/TopNav/TopNav';
 import { Box } from '@mui/material';
 
 function srcset(image, size, rows = 1, cols = 1) {

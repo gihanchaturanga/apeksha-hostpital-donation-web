@@ -34,9 +34,7 @@ export const Login = () => {
               placeholder="Your Password"
               name="password"
             />
-            <a href="xxxxx" style={{ textDecoration: "none" }}>
-              Forget Password?
-            </a>
+            <a href="xxxxx" style={{textDecoration:"none"}}>Forget Password?</a>
           </Box>
           <div className="login-field">
             <Button
@@ -65,7 +63,7 @@ export const Login = () => {
         }}
       >
         <div className="background-image" display="inline-block"></div>
-      </Box>
+      </Grid>
     </Grid>
   );
 };

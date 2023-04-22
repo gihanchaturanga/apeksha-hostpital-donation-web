@@ -15,7 +15,7 @@
     font-size: 20px;
 }
 
-.main-txt:hover{
+.main-txt:hover {
     color: #4C3B2BF0;
 }
 
@@ -48,6 +48,10 @@
     background-image: url("../../resources/images/mobileBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#login-btn:hover {
+    background-color: #4c3b2ba4;
 }
 
 @media (max-width: 900px) {

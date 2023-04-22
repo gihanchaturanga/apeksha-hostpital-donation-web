@@ -88,7 +88,10 @@ export const Footer = () => {
               <Link to="" className="links">
                 About Us
               </Link>
-              <p style={{fontWeight:"bold"}}>MAMBEK Software Solutions</p>
+              <br />
+              <Link to="" className="links">
+                MAMBEK Software Solutions
+              </Link>
               <p>Copyright © 2023</p>
             </div>
           </div>

@@ -20,7 +20,6 @@ const pages = ["Gallery", "Upcomming Events", "Appendix"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
-
   const nav = useNavigate();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -104,9 +103,12 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={() => {
-                  nav("/login");
-                }}>
+                  <MenuItem
+                    key={page}
+                    onClick={() => {
+                      nav("/login");
+                    }}
+                  >
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -142,8 +144,8 @@ function ResponsiveAppBar() {
                 <Button //TODO -> need to be fixed the route to the gallery
                   key={page}
                   onClick={() => {
-                  nav("/gallery");
-                }}
+                    nav("/gallery");
+                  }}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
@@ -182,7 +184,11 @@ function ResponsiveAppBar() {
           </Box> */}
             <Box sx={{ flexGrow: 0 }} className="log_btn_box">
               <Button
-                sx={{ color: "black", mx: "10px" }}
+                sx={{
+                  color: "black",
+                  paddingLeft: "20px",
+                  paddingRight: "20px",
+                }}
                 onClick={() => {
                   nav("/login");
                 }}

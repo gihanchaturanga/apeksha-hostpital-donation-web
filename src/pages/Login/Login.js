@@ -63,7 +63,7 @@ export const Login = () => {
         }}
       >
         <div className="background-image" display="inline-block"></div>
-      </Grid>
+      </Box>
     </Grid>
   );
 };

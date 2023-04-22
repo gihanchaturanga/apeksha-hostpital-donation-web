@@ -6,7 +6,7 @@ import logo from "../../resources/logo/VolunteerSL(dark).png";
 
 export const Login = () => {
   return (
-    <Grid container direction="row" className="outer-container">
+    <Grid container direction="row" className="main-container">
       <Grid item xs={12} md={5} className="login-section grid-item">
         <div className="header-container">
           <img id="logo" src={logo} alt="Volunteer Logo" />
@@ -55,7 +55,7 @@ export const Login = () => {
       <Box
         item
         component={Grid}
-        display={{xs:"none"}}
+        display={{xs:"none", md:"block"}}
         md
         className="grid-item"
         sx={{

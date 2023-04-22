@@ -1,6 +1,6 @@
 import React from "react";
 import NewTextField from "../../common/TextField/NewTextField";
-import { Grid, Button } from "@mui/material";
+import { Grid, Button, Box } from "@mui/material";
 import "./Login.css";
 import logo from "../../resources/logo/VolunteerSL(dark).png";
 
@@ -51,7 +51,9 @@ export const Login = () => {
           </div>
         </div>
       </Grid>
-      <Grid item xs={{ display: "none" }} md className="img grid-item"></Grid>
+      <Grid item xs={{ display: "none" }} md className="grid-item" sx={{paddingTop:"60px", paddingRight:"40px", backgroundColor:"#4C3B2BF0"}}>
+        <div className="img" display="inline-block"></div>
+      </Grid>
     </Grid>
   );
 };

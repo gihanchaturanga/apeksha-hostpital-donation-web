@@ -104,7 +104,9 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page} onClick={() => {
+                  nav("/login");
+                }}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -137,9 +139,11 @@ function ResponsiveAppBar() {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Button
+                <Button //TODO -> need to be fixed the route to the gallery
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => {
+                  nav("/gallery");
+                }}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}

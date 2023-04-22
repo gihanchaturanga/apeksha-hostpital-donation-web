@@ -3,6 +3,7 @@ import NewTextField from "../../common/TextField/NewTextField";
 import { Grid, Button, Box } from "@mui/material";
 import "./Login.css";
 import logo from "../../resources/logo/VolunteerSL(dark).png";
+import {Link} from 'react-router-dom'
 
 export const Login = () => {
   return (
@@ -10,7 +11,7 @@ export const Login = () => {
       <Grid item xs={12} md={5} className="login-section grid-item">
         <div className="header-container">
           <img id="logo" src={logo} alt="Volunteer Logo" />
-          <span className="main-txt">Volunteer Sri Lanka</span>
+          <span><Link to='/' className="main-txt">Volunteer Sri Lanka</Link></span>
         </div>
         <div className="field-container">
           <div className="login-field">

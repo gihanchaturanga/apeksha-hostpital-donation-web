@@ -69,6 +69,7 @@ function ResponsiveAppBar() {
                 color: "inherit",
                 textDecoration: "none",
               }}
+              className="link"
             >
               Volunteer Sri Lanka
             </Typography>
@@ -119,7 +120,7 @@ function ResponsiveAppBar() {
               variant="h5"
               noWrap
               component="a"
-              href=""
+              href="/"
               sx={{
                 mr: 2,
                 flexGrow: 1,
@@ -129,7 +130,8 @@ function ResponsiveAppBar() {
                 color: "inherit",
                 textDecoration: "none",
               }}
-              className="site-text"
+              id="site-text"
+              className="link"
             >
               Volunteer SL
             </Typography>

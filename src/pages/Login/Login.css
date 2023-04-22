@@ -9,8 +9,14 @@
 }
 
 .main-txt {
+    text-decoration: none;
+    color: black;
     font-family: ItimBold;
     font-size: 20px;
+}
+
+.main-txt:hover{
+    color: #4C3B2BF0;
 }
 
 .login-section {

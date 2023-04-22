@@ -1,14 +1,13 @@
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NewSelect from './common/Select/NewSelect';
+import "./App.css";
+
+import { BrowserRouter as Nav } from "react-router-dom";
+import { RouteConfig } from "./utils/RouteConfig";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<NewSelect label={'new label'} err></NewSelect>}/>
-      </Routes>
-    </BrowserRouter>
+    <Nav>
+      <RouteConfig />
+    </Nav>
   );
 }
 

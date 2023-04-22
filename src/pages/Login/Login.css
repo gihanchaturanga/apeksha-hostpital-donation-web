@@ -1,0 +1,62 @@
+.main-container {
+    background-color: #F6EDE4;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+}
+
+.main-txt {
+    font-family: ItimBold;
+    font-size: 20px;
+}
+
+.login-section {
+    padding: 5px;
+    height: 100%;
+}
+
+.header-container {
+}
+
+.field-container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 30px;
+}
+
+.login-field {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.grid-item {
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    background-image: url("../../resources/images/mobileBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        background-image: url("../../resources/images/mobileBackground.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-container {
+        background-image: url("../../resources/images/mobileBackgroundResized.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

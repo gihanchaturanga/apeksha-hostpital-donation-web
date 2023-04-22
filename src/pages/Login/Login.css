@@ -1,5 +1,6 @@
 .main-container {
     background-color: #F6EDE4;
+    height:100vh;
 }
 
 #logo {
@@ -46,7 +47,7 @@
 }
 
 @media (max-width: 900px) {
-    .outer-container {
+    .main-container {
         background-image: url("../../resources/images/mobileBackground.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -54,7 +55,7 @@
 }
 
 @media (max-width: 400px) {
-    .outer-container {
+    .main-container {
         background-image: url("../../resources/images/mobileBackgroundResized.jpg");
         background-repeat: no-repeat;
         background-size: cover;

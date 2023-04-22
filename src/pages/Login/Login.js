@@ -53,7 +53,7 @@ export const Login = () => {
         </div>
       </Grid>
       <Grid item xs={{ display: "none" }} md className="grid-item" sx={{paddingTop:"60px", paddingRight:"40px", backgroundColor:"#4C3B2BF0"}}>
-        <div className="img" display="inline-block"></div>
+        <div className="background-image" display="inline-block"></div>
       </Grid>
     </Grid>
   );

@@ -35,6 +35,7 @@ export const Login = () => {
               placeholder="Your Password"
               name="password"
             />
+            <a href="xxxxx" style={{textDecoration:"none"}}>Forget Password?</a>
           </div>
           <div className="login-field">
             <Button

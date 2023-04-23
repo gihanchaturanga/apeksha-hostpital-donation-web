@@ -17,7 +17,7 @@ export default function Gallery() {
   return (
     <>
         <ResponsiveAppBar/>
-        <Box paddingX={1} paddingTop={1}>
+        <Box paddingX={1} paddingTop={1} marginBottom={0}>
         <ImageList
         variant="quilted"
         cols={4}

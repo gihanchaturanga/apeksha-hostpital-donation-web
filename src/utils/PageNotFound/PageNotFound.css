@@ -4,7 +4,6 @@
     background-color: #F6EDE4;
     text-align: center;
     border: 2px solid black;
-    padding: auto;
 }
 
 .pnf-h1 {
@@ -17,7 +16,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #4C3B2BF0;
+    -webkit-text-stroke-color: #fd757773;
 }
 
 .pnf-h3 {

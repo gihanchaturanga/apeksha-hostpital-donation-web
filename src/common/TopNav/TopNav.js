@@ -14,13 +14,12 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "../../resources/logo/VolunteerSL(white).png";
 import "./TopNav.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
-const pages = ["Gallery", "Upcomming Events", "Appendix"];
+const pages = ["Campaigns", "Donate", "Gallery", "About Us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
-
   const nav = useNavigate();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -104,20 +103,24 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={() => {
-                  nav("/login");
-                }}>
+                  <MenuItem
+                    key={page}
+                    onClick={() => {
+                      nav("/gallery");
+                    }}
+                  >
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
+            <Link to="/">
             <img
               id="main-logo"
               src={logo}
               alt="Volunteer Logo"
               className="logo-2"
-            />
+            /></Link>
             <Typography
               variant="h5"
               noWrap
@@ -142,8 +145,8 @@ function ResponsiveAppBar() {
                 <Button //TODO -> need to be fixed the route to the gallery
                   key={page}
                   onClick={() => {
-                  nav("/gallery");
-                }}
+                    nav("/gallery");
+                  }}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
@@ -182,7 +185,11 @@ function ResponsiveAppBar() {
           </Box> */}
             <Box sx={{ flexGrow: 0 }} className="log_btn_box">
               <Button
-                sx={{ color: "black", mx: "10px" }}
+                sx={{
+                  color: "black",
+                  paddingLeft: "20px",
+                  paddingRight: "20px",
+                }}
                 onClick={() => {
                   nav("/login");
                 }}

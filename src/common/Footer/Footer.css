@@ -1,0 +1,43 @@
+.footer-container {
+    background-color: #4C3B2BF0;
+    color: white;
+}
+
+.brand-footer {
+    font-family: "ItimBold";
+    font-weight: 900;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+#footer-logo {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#subscribe_btn {
+    margin-top: 10px;
+    background-color: #F7EDE4;
+    border-radius: 4px;
+}
+
+#subscribe_btn:hover {
+    background-color: white;
+}
+
+.logo-social {
+    width: 28px;
+    height: 28px;
+    margin: 12px;
+}
+
+.links {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #F7EDE4;
+}
+
+.links:hover {
+    color: white;
+}

@@ -33,8 +33,6 @@
     background-color: #4c3b2b88;
 }
 
-.pnf-back-img {}
-
 @media (max-width: 600px) {
     .pnf-h1 {
         font-size: 80px;

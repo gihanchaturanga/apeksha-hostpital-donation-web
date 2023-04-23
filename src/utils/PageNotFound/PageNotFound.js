@@ -13,9 +13,7 @@ export const PageNotFound = () => {
       alignItems="center"
     >
       <div>
-        <div className="pnf-back-img">
-          <h1 className="pnf-h1">Oops!</h1>
-        </div>
+        <h1 className="pnf-h1">Oops!</h1>
         <h3 className="pnf-h3">404 - PAGE NOT FOUND</h3>
         <p className="pnf-p">
           The page you're looking for does not exist or has been moved.

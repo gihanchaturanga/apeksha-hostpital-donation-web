@@ -42,6 +42,12 @@ function ResponsiveAppBar() {
   //   setAnchorElUser(null);
   // };
 
+  const handleNavClick = (loc) => {
+    let navKey = loc;
+    console.log(navKey);
+    nav("/" + navKey.toLowerCase());
+  };
+
   return (
     <div>
       <AppBar position="static">
@@ -103,9 +109,7 @@ function ResponsiveAppBar() {
                 {pages.map((page) => (
                   <MenuItem
                     key={page}
-                    onClick={() => {
-                      nav("/gallery");
-                    }}
+                    onClick={() => handleNavClick(page.toLowerCase())}
                   >
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -135,6 +139,7 @@ function ResponsiveAppBar() {
                 fontSize: 23,
                 color: "inherit",
                 textDecoration: "none",
+                float: "right",
               }}
               id="site-text"
               className="link"
@@ -146,9 +151,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <Button //TODO -> need to be fixed the route to the gallery
                   key={page}
-                  onClick={() => {
-                    nav("/gallery");
-                  }}
+                  onClick={() => handleNavClick(page.toLowerCase())}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}

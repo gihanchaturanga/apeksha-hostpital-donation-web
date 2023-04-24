@@ -4,6 +4,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from 'react-router-dom';
 import { Typography } from '@mui/material';
+import ResponsiveAppBar from '../../common/TopNav/TopNav';
 
 export default function MasonryImageList() {
 
@@ -11,6 +12,7 @@ export default function MasonryImageList() {
 
   return (
     <>
+    <ResponsiveAppBar />
     <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center'}} marginY={3}>{title}</Typography>
       <Box sx={{ overflowY: 'scroll', paddingLeft: 2, paddingRight: 2 }}>
         <ImageList variant="masonry" cols={3}>

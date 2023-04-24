@@ -5,6 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import ResponsiveAppBar from '../../common/TopNav/TopNav';
+import { Footer } from '../../common/Footer/Footer';
 
 export default function MasonryImageList() {
 
@@ -28,6 +29,7 @@ export default function MasonryImageList() {
           ) : null)}
         </ImageList>
       </Box>
+      <Footer/>
     </>
   );
 }

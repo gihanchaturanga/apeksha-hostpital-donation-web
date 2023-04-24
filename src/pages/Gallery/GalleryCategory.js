@@ -3,12 +3,15 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Grid } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function GalleryCategory() {
 
+    const nav = useNavigate();
+
     const handleClick = (event) => {
-        alert('handling the fuck out of it..!' + event.target.id)
+        nav('/gallery/'+event.target.id);
     }
 
     

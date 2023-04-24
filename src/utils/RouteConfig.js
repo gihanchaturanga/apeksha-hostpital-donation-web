@@ -8,7 +8,7 @@ export const RouteConfig = () => {
   let routes = useRoutes([
     {path:"/", element: <RenderHome/>},
     {path:"/login", element: <Login/>},
-    {path:"/gallery", element: <GalleryCategory/>}
+    {path:"/gallery", element: <GalleryCategory/>},
     {path:"/gallery/:id", element: <Gallery/>}
   ])
 

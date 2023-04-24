@@ -23,7 +23,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const web_title = props.title || "Revotech Solutions";
+  const web_title = "Volunteer Sri Lanka";
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

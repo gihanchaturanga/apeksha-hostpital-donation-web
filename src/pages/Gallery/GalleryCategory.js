@@ -4,11 +4,14 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Box, Button, Grid, Hidden } from '@mui/material';
 
+
 export default function GalleryCategory() {
 
     const handleClick = (event) => {
         alert('handling the fuck out of it..!' + event.target.id)
     }
+
+    
 
   return (
     <>

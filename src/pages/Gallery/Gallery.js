@@ -2,12 +2,16 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { useParams } from 'react-router-dom';
 
 export default function MasonryImageList() {
+
+  let {id} =  useParams();
+
   return (
     <Box sx={{ overflowY: 'scroll' }}>
       <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item) => item.collection == 4 ? (
+        {itemData.map((item) => item.collection == id ? (
           <ImageListItem key={item.img}>
             <img
               src={`${item.img}?w=248&fit=crop&auto=format`}

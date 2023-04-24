@@ -3,26 +3,30 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 export default function MasonryImageList() {
 
-  let {id} =  useParams();
+  let {id, title} =  useParams();
 
   return (
-    <Box sx={{ overflowY: 'scroll' }}>
-      <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item) => item.collection == id ? (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ) : null)}
-      </ImageList>
-    </Box>
+    <>
+    <Typography variant='h3' marginY={3}>{title}</Typography>
+      <Box sx={{ overflowY: 'scroll', paddingLeft: 2, paddingRight: 2 }}>
+        <ImageList variant="masonry" cols={3}>
+          {itemData.map((item) => item.collection == id ? (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ) : null)}
+        </ImageList>
+      </Box>
+    </>
   );
 }
 

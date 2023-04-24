@@ -11,7 +11,7 @@ export default function GalleryCategory() {
     const nav = useNavigate();
 
     const handleClick = (event) => {
-        nav('/gallery/'+event.target.id);
+        nav('/gallery/'+event.target.id+'/'+event.target.title);
     }
 
     
@@ -29,6 +29,7 @@ export default function GalleryCategory() {
                         alt={item.title} 
                         loading="lazy" 
                         id={item.id}
+                        title={item.name}
                     />
                     <ImageListItemBar
                         title={item.title}
@@ -46,24 +47,28 @@ export default function GalleryCategory() {
 const itemData = [
   {
     id: 1,
+    name: "Education Charties",
     img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
     title: 'Breakfast',
     author: '@bkristastucchio',
   },
   {
     id: 2,
+    name: 'Healthcare Charities',
     img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
     title: 'Burger',
     author: '@rollelflex_graphy726',
   },
   {
     id: 3,
+    name: 'Sanatery Charities',
     img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
     title: 'Camera',
     author: '@helloimnik',
   },
   {
     id: 4,
+    name: 'Other Charities',
     img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
     title: 'Coffee',
     author: '@nolanissac',

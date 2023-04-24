@@ -9,7 +9,7 @@ export const RouteConfig = () => {
     {path:"/", element: <RenderHome/>},
     {path:"/login", element: <Login/>},
     {path:"/gallery", element: <GalleryCategory/>},
-    {path:"/gallery/:id", element: <Gallery/>}
+    {path:"/gallery/:id/:title", element: <Gallery/>}
   ])
 
   return routes;

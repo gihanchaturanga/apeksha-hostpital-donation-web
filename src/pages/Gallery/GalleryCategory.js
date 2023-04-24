@@ -2,7 +2,7 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Box, Button, Grid, Hidden } from '@mui/material';
+import { Grid } from '@mui/material';
 
 
 export default function GalleryCategory() {

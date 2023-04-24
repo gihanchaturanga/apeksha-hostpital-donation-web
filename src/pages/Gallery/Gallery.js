@@ -11,7 +11,7 @@ export default function MasonryImageList() {
 
   return (
     <>
-    <Typography variant='h3' marginY={3}>{title}</Typography>
+    <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center'}} marginY={3}>{title}</Typography>
       <Box sx={{ overflowY: 'scroll', paddingLeft: 2, paddingRight: 2 }}>
         <ImageList variant="masonry" cols={3}>
           {itemData.map((item) => item.collection == id ? (

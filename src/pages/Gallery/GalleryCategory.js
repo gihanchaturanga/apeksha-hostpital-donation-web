@@ -2,9 +2,9 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
+import { Typography } from '@mui/material';
 
 export default function GalleryCategory() {
 
@@ -18,6 +18,7 @@ export default function GalleryCategory() {
 
   return (
     <>
+    <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center'}} marginY={3}>{'Gallery'}</Typography>
         <Grid container spacing={2} marginY={2} paddingX={2}>
         
                 {itemData.map((item) => (
@@ -31,11 +32,13 @@ export default function GalleryCategory() {
                         id={item.id}
                         title={item.name}
                     />
-                    <ImageListItemBar
-                        title={item.title}
-                        subtitle={<span>by: {item.author}</span>}
-                        position="below"
-                    />
+                    <Box marginX={1}>
+                        <ImageListItemBar
+                            title={item.title}
+                            subtitle={<span>{item.author}</span>}
+                            position="below"
+                        />
+                    </Box>
                     </ImageListItem>
                 </Grid>
                 ))}

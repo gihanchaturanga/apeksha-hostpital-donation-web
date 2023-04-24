@@ -6,6 +6,7 @@ import { Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import ResponsiveAppBar from '../../common/TopNav/TopNav';
+import { Footer } from '../../common/Footer/Footer';
 
 export default function GalleryCategory() {
 
@@ -45,6 +46,7 @@ export default function GalleryCategory() {
                 </Grid>
                 ))}
         </Grid>
+        <Footer />
     </>
   );
 }

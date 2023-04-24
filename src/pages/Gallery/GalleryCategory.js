@@ -5,6 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
+import ResponsiveAppBar from '../../common/TopNav/TopNav';
 
 export default function GalleryCategory() {
 
@@ -18,6 +19,7 @@ export default function GalleryCategory() {
 
   return (
     <>
+    <ResponsiveAppBar />
     <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center'}} marginY={3}>{'Gallery'}</Typography>
         <Grid container spacing={2} marginY={2} paddingX={2}>
         

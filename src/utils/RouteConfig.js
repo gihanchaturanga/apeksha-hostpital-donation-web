@@ -12,5 +12,5 @@ export const RouteConfig = () => {
     {path:"/gallery/:id", element: <Gallery/>}
   ])
 
-  return routes
+  return routes;
 }

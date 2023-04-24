@@ -7,7 +7,7 @@ export default function MasonryImageList() {
   return (
     <Box sx={{ overflowY: 'scroll' }}>
       <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item) => (
+        {itemData.map((item) => item.collection == 4 ? (
           <ImageListItem key={item.img}>
             <img
               src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -16,7 +16,7 @@ export default function MasonryImageList() {
               loading="lazy"
             />
           </ImageListItem>
-        ))}
+        ) : null)}
       </ImageList>
     </Box>
   );

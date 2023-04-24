@@ -1,7 +1,8 @@
 import React from 'react'
 import ResponsiveDrawer from '../../common/AdminNav/AdminNav'
-import { ThemeProvider, Typography, createTheme } from '@mui/material'
+import { Grid, ThemeProvider, Typography, createTheme } from '@mui/material'
 import { amber, blueGrey, brown, deepOrange, green, grey, orange } from '@mui/material/colors'
+import SimpleInfo from './SimpleInfo';
 
 const Dashboard = () => {
 
@@ -41,7 +42,20 @@ const Dashboard = () => {
     <>
         <ThemeProvider theme={theme}>
             <ResponsiveDrawer>
-            <Typography variant='h1' color={'primary.light'}>Here we go</Typography>
+            <Grid container spacing={2}>
+                <Grid item lg={3} md={6} sm={6} xs={12}>
+                <SimpleInfo title={'Number of members'} value={2540} sx={{backgroundColor: 'secondary.light'}}/>
+                </Grid>
+                <Grid item lg={3} md={6} sm={6} xs={12}>
+                <SimpleInfo title={'Number of members'} value={2540} sx={{backgroundColor: 'warning.light'}}/>
+                </Grid>
+                <Grid item lg={3} md={6} sm={6} xs={12}>
+                <SimpleInfo title={'Number of members'} value={2540} sx={{backgroundColor: 'success.light'}}/>
+                </Grid>
+                <Grid item lg={3} md={6} sm={6} xs={12}>
+                <SimpleInfo title={'Number of members'} value={2540} sx={{backgroundColor: 'error.light'}}/>
+                </Grid>
+            </Grid>
             </ResponsiveDrawer>
             
         </ThemeProvider>

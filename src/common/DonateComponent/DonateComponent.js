@@ -1,9 +1,8 @@
 import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActions } from "@mui/material";
 import "./DonateComponent.css";
 
 export const DonateComponent = () => {
@@ -28,7 +27,7 @@ export const DonateComponent = () => {
             backgroundColor: "#4C3B2BF0",
             color: "#F6EDE4",
           }}
-          className="donate-comp-btn"
+          id="donate-comp-btn"
         >
           CONTRIBUTE
         </Button>

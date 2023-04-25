@@ -1,11 +1,11 @@
-.outer-container {
+.main-outer-container {
     height: 100vh;
     display: flex;
     flex-flow: column;
     background-color: #F6EDE4;
 }
 
-.body-container {
+.main-body-container {
     flex-grow: 1;
 }
 

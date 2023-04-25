@@ -1,8 +1,9 @@
 import React from "react";
 import ResponsiveAppBar from "../../common/TopNav/TopNav";
 import "./Main.css";
-import { Grid, Button } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { Footer } from "../../common/Footer/Footer";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 
 function RenderHome() {
   return (
@@ -15,12 +16,21 @@ function RenderHome() {
             <h1 className="main-text">Your Donations</h1>
             <p className="main-text">Have the Power to</p>
             <h4 className="main-text">Make a Difference..!</h4>
-            <Button variant="outlined" id="donate-btn">
-              CONTRIBUTE
+            <Button
+              variant="outlined"
+              startIcon={<VolunteerActivismIcon />}
+              id="donate-btn"
+            >
+              DONATE
             </Button>
           </Grid>
         </Grid>
       </div>
+
+      <Grid className="main-page-card-wrpper">
+        {/* TODO: Check the responsiveness and content */}
+      </Grid>
+
       <Footer />
     </div>
   );

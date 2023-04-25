@@ -31,6 +31,14 @@
     margin-bottom: 20px;
 }
 
+.main-page-card-wrpper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 600px) {
     .bg-img {
         background-size: cover;

@@ -21,7 +21,7 @@ export default function GalleryCategory() {
   return (
     <>
     <ResponsiveAppBar />
-    <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center'}} marginY={3}>{'Gallery'}</Typography>
+    <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center',fontFamily: "ItimBold",fontWeight: 900}} marginY={3}>{'Gallery'}</Typography>
         <Grid container spacing={2} marginY={2} paddingX={2}>
         
                 {itemData.map((item) => (

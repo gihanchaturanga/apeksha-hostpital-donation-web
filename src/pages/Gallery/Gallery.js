@@ -12,9 +12,9 @@ export default function MasonryImageList() {
   let {id, title} =  useParams();
 
   return (
-    <>
+    <React.Fragment>
     <ResponsiveAppBar />
-    <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center'}} marginY={3}>{title}</Typography>
+    <Typography variant='h3' sx={{color: "#4C3B2BF0", textAlign: 'center',fontFamily: "ItimBold",fontWeight: 900}} marginY={3}>{title}</Typography>
       <Box sx={{ overflowY: 'scroll', paddingLeft: 2, paddingRight: 2 }}>
         <ImageList variant="masonry" cols={3}>
           {itemData.map((item) => item.collection == id ? (
@@ -30,7 +30,7 @@ export default function MasonryImageList() {
         </ImageList>
       </Box>
       <Footer/>
-    </>
+    </React.Fragment>
   );
 }
 

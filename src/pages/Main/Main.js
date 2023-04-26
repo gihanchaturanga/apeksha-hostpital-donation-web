@@ -32,7 +32,6 @@ function RenderHome() {
         <center>
           <DonateComponent/>
         </center>
-        {/* TODO: Check the responsiveness and content */}
       </Grid>
 
       <Footer />

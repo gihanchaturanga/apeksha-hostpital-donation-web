@@ -31,6 +31,7 @@ export default function NewSelect(props) {
                 onChange={handleChange}
                 native
                 variant='outlined'
+                defaultValue={props.defaultValue}
                 >
                 {none ? <option value=""></option> : null}
                   {props.children}

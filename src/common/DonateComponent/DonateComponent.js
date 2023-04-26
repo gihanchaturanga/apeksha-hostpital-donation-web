@@ -259,21 +259,23 @@ export const DonateComponent = () => {
             id="outlined-adornment-amount"
             startAdornment={
               <InputAdornment position="start">
-                {currency_list.map((currObj) =>
-                  currObj.code === currency ? currObj.symbol : "LKR"
-                )}
+                {() => {
+                  let label = "LKR";
+                  currency_list.map((currObj) => {
+                    label = currObj.code === currency ? currObj.symbol : "LKR";
+                  });
+                  return label;
+                }}
               </InputAdornment>
             }
             label="Amount"
             endAdornment={
-              <InputAdornment position="end" width={10} height="100%">
+              <InputAdornment position="end">
                 <NewSelect
                   aria-label="currency"
                   value={currency}
                   onChange={handleCurrencySelect}
                   edge="end"
-                  width="100%"
-                  height="100%"
                   defaultValue="LKR"
                   native
                 >

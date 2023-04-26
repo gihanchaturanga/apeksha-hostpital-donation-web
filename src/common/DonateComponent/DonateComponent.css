@@ -1,3 +1,18 @@
 #donate-comp-btn:hover {
     background-color: #4c3b2ba4;
 }
+
+#normal {
+    border-color: #4c3b2ba4;
+    color: #4c3b2ba4;
+    border-radius: 5px;
+}
+
+#selected {
+    color: #4c3b2ba4;
+    background-color: #F6EDE4;
+    border-color: #4c3b2ba4;
+    border-radius: 5px;
+    outline: 2px solid;
+    outline-offset: -2px;
+}

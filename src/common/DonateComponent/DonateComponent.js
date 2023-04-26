@@ -8,33 +8,198 @@ import {
   ToggleButtonGroup,
   ToggleButton,
   InputAdornment,
-  InputLabel,
   OutlinedInput,
   FormControl,
-  Select,
   TextField,
   MenuItem,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import NewSelect from "../../common/Select/NewSelect";
 import "./DonateComponent.css";
 
 export const DonateComponent = () => {
   const currency_list = [
-    { name: "British Pound Sterling", code: "GBP", symbol: "£" },
-    { name: "Canadian Dollar", code: "CAD", symbol: "$" },
-    { name: "Chinese Yuan", code: "CNY", symbol: "¥" },
-    { name: "Euro", code: "EUR", symbol: "€" },
-    { name: "Indian Rupee", code: "INR", symbol: "₹" },
-    { name: "Japanese Yen", code: "JPY", symbol: "¥" },
-    { name: "Kuwaiti Dinar", code: "KWD", symbol: "ك.د" },
-    { name: "Pakistani Rupee", code: "PKR", symbol: "₨" },
-    { name: "Qatari Rial", code: "QAR", symbol: "ق.ر" },
-    { name: "Singapore Dollar", code: "SGD", symbol: "$" },
-    { name: "Sri Lankan Rupee", code: "LKR", symbol: "Rs" },
-    { name: "Swiss Franc", code: "CHF", symbol: "CHf" },
-    { name: "United Arab Emirates Dirham", code: "AED", symbol: "إ.د" },
-    { name: "US Dollar", code: "USD", symbol: "$" },
+    {
+      name: "British Pound Sterling",
+      code: "GBP",
+      symbol: "£",
+      vals: [
+        { key: "£ 5", value: "5" },
+        { key: "£ 15", value: "15" },
+        { key: "£ 25", value: "25" },
+        { key: "£ 30", value: "30" },
+        { key: "£ 50", value: "50" },
+        { key: "£ 100", value: "100" },
+      ],
+    },
+    {
+      name: "Canadian Dollar",
+      code: "CAD",
+      symbol: "$",
+      vals: [
+        { key: "$ 25", value: "25" },
+        { key: "$ 50", value: "50" },
+        { key: "$ 100", value: "100" },
+        { key: "$ 250", value: "250" },
+        { key: "$ 500", value: "500" },
+        { key: "$ 1,500", value: "1500" },
+      ],
+    },
+    {
+      name: "Chinese Yuan",
+      code: "CNY",
+      symbol: "¥",
+      vals: [
+        { key: "¥ 50", value: "50" },
+        { key: "¥ 110", value: "110" },
+        { key: "¥ 200", value: "200" },
+        { key: "¥ 500", value: "500" },
+        { key: "¥ 1,500", value: "1500" },
+        { key: "¥ 2,200", value: "2200" },
+      ],
+    },
+    {
+      name: "Euro",
+      code: "EUR",
+      symbol: "€",
+      vals: [
+        { key: "€ 5", value: "5" },
+        { key: "€ 25", value: "25" },
+        { key: "€ 50", value: "50" },
+        { key: "€ 100", value: "100" },
+        { key: "€ 250", value: "250" },
+        { key: "€ 500", value: "500" },
+      ],
+    },
+    {
+      name: "Indian Rupee",
+      code: "INR",
+      symbol: "₹",
+      vals: [
+        { key: "₹ 500", value: "500" },
+        { key: "₹ 1,500", value: "1500" },
+        { key: "₹ 4k", value: "4000" },
+        { key: "₹ 7.5k", value: "7500" },
+        { key: "₹ 12.5k", value: "12500" },
+        { key: "₹ 25k", value: "25000" },
+      ],
+    },
+    {
+      name: "Japanese Yen",
+      code: "JPY",
+      symbol: "¥",
+      vals: [
+        { key: "¥ 1,500", value: "1500" },
+        { key: "¥ 2.5k", value: "2500" },
+        { key: "¥ 5k", value: "5000" },
+        { key: "¥ 10k", value: "10000" },
+        { key: "¥ 25k", value: "25000" },
+        { key: "¥ 50k", value: "50000" },
+      ],
+    },
+    {
+      name: "Kuwaiti Dinar",
+      code: "KWD",
+      symbol: "ك.د",
+      vals: [
+        { key: "5", value: "5" },
+        { key: "10", value: "10" },
+        { key: "20", value: "20" },
+        { key: "30", value: "30" },
+        { key: "50", value: "50" },
+        { key: "100", value: "100" },
+      ],
+    },
+    {
+      name: "Pakistani Rupee",
+      code: "PKR",
+      symbol: "₨",
+      vals: [
+        { key: "Rs 2,000", value: "2000" },
+        { key: "Rs 5,000", value: "5000" },
+        { key: "Rs 15k", value: "15000" },
+        { key: "Rs 30k", value: "30000" },
+        { key: "Rs 50k", value: "50000" },
+        { key: "Rs 100k", value: "100000" },
+      ],
+    },
+    {
+      name: "Qatari Rial",
+      code: "QAR",
+      symbol: "ق.ر",
+      vals: [
+        { key: "25", value: "25" },
+        { key: "50", value: "50" },
+        { key: "100", value: "100" },
+        { key: "250", value: "250" },
+        { key: "500", value: "500" },
+        { key: "1,500", value: "1500" },
+      ],
+    },
+    {
+      name: "Singapore Dollar",
+      code: "SGD",
+      symbol: "$",
+      vals: [
+        { key: "$ 25", value: "25" },
+        { key: "$ 50", value: "50" },
+        { key: "$ 100", value: "100" },
+        { key: "$ 250", value: "250" },
+        { key: "$ 500", value: "500" },
+        { key: "$ 1,500", value: "1500" },
+      ],
+    },
+    {
+      name: "Sri Lankan Rupee",
+      code: "LKR",
+      symbol: "Rs",
+      vals: [
+        { key: "Rs 2,000", value: "2000" },
+        { key: "Rs 5,000", value: "5000" },
+        { key: "Rs 8,000", value: "8000" },
+        { key: "Rs 15k", value: "15000" },
+        { key: "Rs 30k", value: "30000" },
+        { key: "Rs 50k", value: "50000" },
+      ],
+    },
+    {
+      name: "Swiss Franc",
+      code: "CHF",
+      symbol: "CHf",
+      vals: [
+        { key: "5", value: "5" },
+        { key: "15", value: "15" },
+        { key: "25", value: "25" },
+        { key: "100", value: "100" },
+        { key: "200", value: "200" },
+        { key: "300", value: "300" },
+      ],
+    },
+    {
+      name: "United Arab Emirates Dirham",
+      code: "AED",
+      symbol: "إ.د",
+      vals: [
+        { key: "20", value: "20" },
+        { key: "50", value: "50" },
+        { key: "80", value: "80" },
+        { key: "150", value: "150" },
+        { key: "300", value: "300" },
+        { key: "500", value: "500" },
+      ],
+    },
+    {
+      name: "US Dollar",
+      code: "USD",
+      symbol: "$",
+      vals: [
+        { key: "$ 25", value: "25" },
+        { key: "$ 50", value: "50" },
+        { key: "$ 100", value: "100" },
+        { key: "$ 250", value: "250" },
+        { key: "$ 500", value: "500" },
+        { key: "$ 1,500", value: "1500" },
+      ],
+    },
   ];
 
   const [type, setType] = useState("one-time");
@@ -161,94 +326,24 @@ export const DonateComponent = () => {
             rowGap: "10px",
           }}
         >
-          <ToggleButton
-            value="2000"
-            variant="outlined"
-            id={value === "2000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 2,000
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="5000"
-            variant="outlined"
-            id={value === "5000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 5,000
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="8000"
-            variant="outlined"
-            id={value === "8000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 8,000
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="12000"
-            variant="outlined"
-            id={value === "12000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 12k
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="15000"
-            variant="outlined"
-            id={value === "15000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 15k
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="20000"
-            variant="outlined"
-            id={value === "20000" ? "selected" : "normal"}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 20k
-          </ToggleButton>
+          {currency_list
+            .find((currObj) => (currObj.code === currency ? currObj : null))
+            .vals.map((obj) => (
+              <ToggleButton
+                item
+                value={obj.value}
+                variant="outlined"
+                id={value === obj.value ? "selected" : "normal"}
+                sx={{
+                  paddingX: "10px",
+                  width: "90px",
+                  boxSizing: "border-box",
+                  fontSize: "15px",
+                }}
+              >
+                {obj.key}
+              </ToggleButton>
+            ))}
         </ToggleButtonGroup>
       </CardContent>
       <CardActions sx={{ justifyContent: "center" }}>

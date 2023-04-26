@@ -11,6 +11,7 @@ import {
   InputLabel,
   OutlinedInput,
   FormControl,
+  Select,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import NewSelect from "../../common/Select/NewSelect";
@@ -203,6 +204,7 @@ export const DonateComponent = () => {
   };
 
   const handleCurrencySelect = (event) => {
+    console.log(event.target.value);
     setCurrency(event.target.value);
   };
 
@@ -271,7 +273,7 @@ export const DonateComponent = () => {
             label="Amount"
             endAdornment={
               <InputAdornment position="end">
-                <NewSelect
+                <Select
                   aria-label="currency"
                   value={currency}
                   onChange={handleCurrencySelect}
@@ -282,7 +284,7 @@ export const DonateComponent = () => {
                   {currency_list.map((currObj) => (
                     <option>{currObj.code}</option>
                   ))}
-                </NewSelect>
+                </Select>
               </InputAdornment>
             }
           />

@@ -73,6 +73,20 @@ const itemData = [
     collection: 1,
     img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
     title: "Sink",
+  },{
+    collection: 1,
+    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
+    title: "Bed",
+  },
+  {
+    collection: 1,
+    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    title: "Books",
+  },
+  {
+    collection: 1,
+    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+    title: "Sink",
   },
   {
     collection: 2,
@@ -98,6 +112,20 @@ const itemData = [
     collection: 3,
     img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
     title: "Doors",
+  },{
+    collection: 3,
+    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
+    title: "Bed",
+  },
+  {
+    collection: 3,
+    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    title: "Books",
+  },
+  {
+    collection: 3,
+    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+    title: "Sink",
   },
   {
     collection: 4,

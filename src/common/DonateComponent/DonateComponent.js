@@ -334,6 +334,7 @@ export const DonateComponent = () => {
                 value={obj.value}
                 variant="outlined"
                 id={value === obj.value ? "selected" : "normal"}
+                elevation={10}
                 sx={{
                   paddingX: "10px",
                   width: "90px",

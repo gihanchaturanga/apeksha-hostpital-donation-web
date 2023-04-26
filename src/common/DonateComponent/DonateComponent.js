@@ -345,6 +345,7 @@ export const DonateComponent = () => {
               </ToggleButton>
             ))}
         </ToggleButtonGroup>
+        
       </CardContent>
       <CardActions sx={{ justifyContent: "center" }}>
         <Button

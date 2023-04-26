@@ -40,7 +40,7 @@ export default function MasonryImageList() {
       <Box sx={{ overflowY: "scroll", paddingLeft: 2, paddingRight: 2 }}>
         <ImageList variant="masonry" cols={3}>
           {itemData.map((item) =>
-            item.collection === id ? (
+            item.collection == id ? (
               <ImageListItem key={item.img}>
                 <img
                   src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -60,6 +60,20 @@ export default function MasonryImageList() {
 
 const itemData = [
   {
+    collection: 1,
+    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
+    title: "Bed",
+  },
+  {
+    collection: 1,
+    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    title: "Books",
+  },
+  {
+    collection: 1,
+    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+    title: "Sink",
+  },{
     collection: 1,
     img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
     title: "Bed",
@@ -98,6 +112,20 @@ const itemData = [
     collection: 3,
     img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
     title: "Doors",
+  },{
+    collection: 3,
+    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
+    title: "Bed",
+  },
+  {
+    collection: 3,
+    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    title: "Books",
+  },
+  {
+    collection: 3,
+    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+    title: "Sink",
   },
   {
     collection: 4,

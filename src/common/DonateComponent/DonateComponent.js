@@ -264,7 +264,8 @@ export const DonateComponent = () => {
                 {() => {
                   let label = "LKR";
                   currency_list.map((currObj) => {
-                    label = currObj.code === currency ? currObj.symbol : "LKR";
+                    label = (currObj.code === currency) ? currObj.symbol : "LKR";
+                    console.log(label)
                   });
                   return label;
                 }}

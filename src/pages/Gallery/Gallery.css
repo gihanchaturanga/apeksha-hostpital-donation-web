@@ -1,0 +1,8 @@
+.breadcrumbs {
+    text-decoration: none;
+}
+
+.breadcrumbs:hover {
+    text-decoration: underline;
+    color: #4C3B2B;
+}

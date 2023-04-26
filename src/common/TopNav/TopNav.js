@@ -49,117 +49,116 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <div>
-      <AppBar position="static">
-        <Container maxWidth="false" className="topNav">
-          <Toolbar disableGutters>
+    <AppBar position="sticky">
+      <Container maxWidth="false" className="topNav">
+        <Toolbar disableGutters>
+          <img
+            id="main-logo"
+            src={logo}
+            alt="Volunteer Logo"
+            className="logo-1"
+          />
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "ItimBold",
+              fontWeight: 900,
+              color: "inherit",
+              textDecoration: "none",
+            }}
+            className="link"
+          >
+            Volunteer Sri Lanka
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem
+                  key={page}
+                  onClick={() => handleNavClick(page.toLowerCase())}
+                >
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          <Link to="/">
             <img
               id="main-logo"
               src={logo}
               alt="Volunteer Logo"
-              className="logo-1"
+              className="logo-2"
             />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "ItimBold",
-                fontWeight: 900,
-                color: "inherit",
-                textDecoration: "none",
-              }}
-              className="link"
-            >
-              Volunteer Sri Lanka
-            </Typography>
+          </Link>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="inherit"
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              flexGrow: 1,
+              fontFamily: "ItimBold",
+              fontWeight: 900,
+              fontSize: 23,
+              color: "inherit",
+              textDecoration: "none",
+              float: "right",
+            }}
+            id="site-text"
+            className="link"
+          >
+            Volunteer SL
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button //TODO -> need to be fixed the route to the gallery
+                key={page}
+                onClick={() => handleNavClick(page.toLowerCase())}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem
-                    key={page}
-                    onClick={() => handleNavClick(page.toLowerCase())}
-                  >
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
+                {page}
+              </Button>
+            ))}
+          </Box>
 
-            <Link to="/">
-              <img
-                id="main-logo"
-                src={logo}
-                alt="Volunteer Logo"
-                className="logo-2"
-              />
-            </Link>
-
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                flexGrow: 1,
-                fontFamily: "ItimBold",
-                fontWeight: 900,
-                fontSize: 23,
-                color: "inherit",
-                textDecoration: "none",
-                float: "right",
-              }}
-              id="site-text"
-              className="link"
-            >
-              Volunteer SL
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
-                <Button //TODO -> need to be fixed the route to the gallery
-                  key={page}
-                  onClick={() => handleNavClick(page.toLowerCase())}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
-
-            {/* <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -188,24 +187,23 @@ function ResponsiveAppBar() {
                 ))}
               </Menu>
             </Box> */}
-            <Box sx={{ flexGrow: 0 }} className="log_btn_box">
-              <Button
-                sx={{
-                  color: "black",
-                  paddingLeft: "20px",
-                  paddingRight: "20px",
-                }}
-                onClick={() => {
-                  nav("/login");
-                }}
-              >
-                Log in
-              </Button>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </div>
+          <Box sx={{ flexGrow: 0 }} className="log_btn_box">
+            <Button
+              sx={{
+                color: "black",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+              }}
+              onClick={() => {
+                nav("/login");
+              }}
+            >
+              Log in
+            </Button>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
 export default ResponsiveAppBar;

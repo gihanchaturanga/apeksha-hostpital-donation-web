@@ -67,9 +67,8 @@ export const DonateComponent = () => {
         </ToggleButtonGroup>
 
         <Typography
-          sx={{ fontSize: 18, paddingTop: 4 }}
+          sx={{ fontSize: 18, marginTop: 6, marginBottom:5 }}
           color="text.secondary"
-          gutterBottom
         >
           Donate to Apeksha Cancer Hospital
         </Typography>
@@ -178,7 +177,7 @@ export const DonateComponent = () => {
             Rs 20k
           </ToggleButton>
         </ToggleButtonGroup>
-        
+
       </CardContent>
       <CardActions sx={{ justifyContent: "center" }}>
         <Button

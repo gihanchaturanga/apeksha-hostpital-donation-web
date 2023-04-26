@@ -261,14 +261,11 @@ export const DonateComponent = () => {
             id="outlined-adornment-amount"
             startAdornment={
               <InputAdornment position="start">
-                {() => {
-                  let label = "LKR";
-                  currency_list.map((currObj) => {
-                    label = (currObj.code === currency) ? currObj.symbol : "LKR";
-                    console.log(label)
-                  });
-                  return label;
-                }}
+                {
+                  currency_list.find((currObj) =>
+                    currObj.code === currency ? currObj.symbol : null
+                  ).symbol
+                }
               </InputAdornment>
             }
             label="Amount"

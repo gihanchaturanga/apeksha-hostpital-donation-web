@@ -8,185 +8,198 @@ import {
   ToggleButtonGroup,
   ToggleButton,
   InputAdornment,
-  InputLabel,
   OutlinedInput,
   FormControl,
-  Select,
+  TextField,
+  MenuItem,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import NewSelect from "../../common/Select/NewSelect";
 import "./DonateComponent.css";
 
 export const DonateComponent = () => {
   const currency_list = [
-    { code: "AFA", symbol: "؋" },
-    { code: "ALL", symbol: "Lek" },
-    { code: "DZD", symbol: "دج" },
-    { code: "AOA", symbol: "Kz" },
-    { code: "ARS", symbol: "$" },
-    { code: "AMD", symbol: "֏" },
-    { code: "AWG", symbol: "ƒ" },
-    { code: "AUD", symbol: "$" },
-    { code: "AZN", symbol: "m" },
-    { code: "BSD", symbol: "B$" },
-    { code: "BHD", symbol: ".د.ب" },
-    { code: "BDT", symbol: "৳" },
-    { code: "BBD", symbol: "Bds$" },
-    { code: "BYR", symbol: "Br" },
-    { code: "BEF", symbol: "fr" },
-    { code: "BZD", symbol: "$" },
-    { code: "BMD", symbol: "$" },
-    { code: "BTN", symbol: "Nu." },
-    { code: "BTC", symbol: "฿" },
-    { code: "BOB", symbol: "Bs." },
-    { code: "BAM", symbol: "KM" },
-    { code: "BWP", symbol: "P" },
-    { code: "BRL", symbol: "R$" },
-    { code: "GBP", symbol: "£" },
-    { code: "BND", symbol: "B$" },
-    { code: "BGN", symbol: "Лв." },
-    { code: "BIF", symbol: "FBu" },
-    { code: "KHR", symbol: "KHR" },
-    { code: "CAD", symbol: "$" },
-    { code: "CVE", symbol: "$" },
-    { code: "KYD", symbol: "$" },
-    { code: "XOF", symbol: "CFA" },
-    { code: "XAF", symbol: "FCFA" },
-    { code: "XPF", symbol: "₣" },
-    { code: "CLP", symbol: "$" },
-    { code: "CLF", symbol: "CLF" },
-    { code: "CNY", symbol: "¥" },
-    { code: "COP", symbol: "$" },
-    { code: "KMF", symbol: "CF" },
-    { code: "CDF", symbol: "FC" },
-    { code: "CRC", symbol: "₡" },
-    { code: "HRK", symbol: "kn" },
-    { code: "CUC", symbol: "$, CUC" },
-    { code: "CZK", symbol: "Kč" },
-    { code: "DKK", symbol: "Kr." },
-    { code: "DJF", symbol: "Fdj" },
-    { code: "DOP", symbol: "$" },
-    { code: "XCD", symbol: "$" },
-    { code: "EGP", symbol: "ج.م" },
-    { code: "ERN", symbol: "Nfk" },
-    { code: "EEK", symbol: "kr" },
-    { code: "ETB", symbol: "Nkf" },
-    { code: "EUR", symbol: "€" },
-    { code: "FKP", symbol: "£" },
-    { code: "FJD", symbol: "FJ$" },
-    { code: "GMD", symbol: "D" },
-    { code: "GEL", symbol: "ლ" },
-    { code: "DEM", symbol: "DM" },
-    { code: "GHS", symbol: "GH₵" },
-    { code: "GIP", symbol: "£" },
-    { code: "GRD", symbol: "₯, Δρχ, Δρ" },
-    { code: "GTQ", symbol: "Q" },
-    { code: "GNF", symbol: "FG" },
-    { code: "GYD", symbol: "$" },
-    { code: "HTG", symbol: "G" },
-    { code: "HNL", symbol: "L" },
-    { code: "HKD", symbol: "$" },
-    { code: "HUF", symbol: "Ft" },
-    { code: "ISK", symbol: "kr" },
-    { code: "INR", symbol: "₹" },
-    { code: "IDR", symbol: "Rp" },
-    { code: "IRR", symbol: "﷼" },
-    { code: "IQD", symbol: "د.ع" },
-    { code: "ILS", symbol: "₪" },
-    { code: "ITL", symbol: "L,£" },
-    { code: "JMD", symbol: "J$" },
-    { code: "JPY", symbol: "¥" },
-    { code: "JOD", symbol: "ا.د" },
-    { code: "KZT", symbol: "лв" },
-    { code: "KES", symbol: "KSh" },
-    { code: "KWD", symbol: "ك.د" },
-    { code: "KGS", symbol: "лв" },
-    { code: "LAK", symbol: "₭" },
-    { code: "LVL", symbol: "Ls" },
-    { code: "LBP", symbol: "£" },
-    { code: "LSL", symbol: "L" },
-    { code: "LRD", symbol: "$" },
-    { code: "LYD", symbol: "د.ل" },
-    { code: "LTC", symbol: "Ł" },
-    { code: "LTL", symbol: "Lt" },
-    { code: "MOP", symbol: "$" },
-    { code: "MKD", symbol: "ден" },
-    { code: "MGA", symbol: "Ar" },
-    { code: "MWK", symbol: "MK" },
-    { code: "MYR", symbol: "RM" },
-    { code: "MVR", symbol: "Rf" },
-    { code: "MRO", symbol: "MRU" },
-    { code: "MUR", symbol: "₨" },
-    { code: "MXN", symbol: "$" },
-    { code: "MDL", symbol: "L" },
-    { code: "MNT", symbol: "₮" },
-    { code: "MAD", symbol: "MAD" },
-    { code: "MZM", symbol: "MT" },
-    { code: "MMK", symbol: "K" },
-    { code: "NAD", symbol: "$" },
-    { code: "NPR", symbol: "₨" },
-    { code: "ANG", symbol: "ƒ" },
-    { code: "TWD", symbol: "$" },
-    { code: "NZD", symbol: "$" },
-    { code: "NIO", symbol: "C$" },
-    { code: "NGN", symbol: "₦" },
-    { code: "KPW", symbol: "₩" },
-    { code: "NOK", symbol: "kr" },
-    { code: "OMR", symbol: ".ع.ر" },
-    { code: "PKR", symbol: "₨" },
-    { code: "PAB", symbol: "B/." },
-    { code: "PGK", symbol: "K" },
-    { code: "PYG", symbol: "₲" },
-    { code: "PEN", symbol: "S/." },
-    { code: "PHP", symbol: "₱" },
-    { code: "PLN", symbol: "zł" },
-    { code: "QAR", symbol: "ق.ر" },
-    { code: "RON", symbol: "lei" },
-    { code: "RUB", symbol: "₽" },
-    { code: "RWF", symbol: "FRw" },
-    { code: "SVC", symbol: "₡" },
-    { code: "WST", symbol: "SAT" },
-    { code: "STD", symbol: "Db" },
-    { code: "SAR", symbol: "﷼" },
-    { code: "RSD", symbol: "din" },
-    { code: "SCR", symbol: "SRe" },
-    { code: "SLL", symbol: "Le" },
-    { code: "SGD", symbol: "$" },
-    { code: "SKK", symbol: "Sk" },
-    { code: "SBD", symbol: "Si$" },
-    { code: "SOS", symbol: "Sh.so." },
-    { code: "ZAR", symbol: "R" },
-    { code: "KRW", symbol: "₩" },
-    { code: "SSP", symbol: "£" },
-    { code: "XDR", symbol: "SDR" },
-    { code: "LKR", symbol: "Rs" },
-    { code: "SHP", symbol: "£" },
-    { code: "SDG", symbol: ".س.ج" },
-    { code: "SRD", symbol: "$" },
-    { code: "SZL", symbol: "E" },
-    { code: "SEK", symbol: "kr" },
-    { code: "CHF", symbol: "CHf" },
-    { code: "SYP", symbol: "LS" },
-    { code: "TJS", symbol: "SM" },
-    { code: "TZS", symbol: "TSh" },
-    { code: "THB", symbol: "฿" },
-    { code: "TOP", symbol: "$" },
-    { code: "TTD", symbol: "$" },
-    { code: "TND", symbol: "ت.د" },
-    { code: "TRY", symbol: "₺" },
-    { code: "TMT", symbol: "T" },
-    { code: "UGX", symbol: "USh" },
-    { code: "UAH", symbol: "₴" },
-    { code: "AED", symbol: "إ.د" },
-    { code: "UYU", symbol: "$" },
-    { code: "USD", symbol: "$" },
-    { code: "UZS", symbol: "лв" },
-    { code: "VUV", symbol: "VT" },
-    { code: "VEF", symbol: "Bs" },
-    { code: "VND", symbol: "₫" },
-    { code: "YER", symbol: "﷼" },
-    { code: "ZMK", symbol: "ZK" },
-    { code: "ZWL", symbol: "$" },
+    {
+      name: "British Pound Sterling",
+      code: "GBP",
+      symbol: "£",
+      vals: [
+        { key: "£ 5", value: "5" },
+        { key: "£ 15", value: "15" },
+        { key: "£ 25", value: "25" },
+        { key: "£ 30", value: "30" },
+        { key: "£ 50", value: "50" },
+        { key: "£ 100", value: "100" },
+      ],
+    },
+    {
+      name: "Canadian Dollar",
+      code: "CAD",
+      symbol: "$",
+      vals: [
+        { key: "$ 25", value: "25" },
+        { key: "$ 50", value: "50" },
+        { key: "$ 100", value: "100" },
+        { key: "$ 250", value: "250" },
+        { key: "$ 500", value: "500" },
+        { key: "$ 1,500", value: "1500" },
+      ],
+    },
+    {
+      name: "Chinese Yuan",
+      code: "CNY",
+      symbol: "¥",
+      vals: [
+        { key: "¥ 50", value: "50" },
+        { key: "¥ 110", value: "110" },
+        { key: "¥ 200", value: "200" },
+        { key: "¥ 500", value: "500" },
+        { key: "¥ 1,500", value: "1500" },
+        { key: "¥ 2,200", value: "2200" },
+      ],
+    },
+    {
+      name: "Euro",
+      code: "EUR",
+      symbol: "€",
+      vals: [
+        { key: "€ 5", value: "5" },
+        { key: "€ 25", value: "25" },
+        { key: "€ 50", value: "50" },
+        { key: "€ 100", value: "100" },
+        { key: "€ 250", value: "250" },
+        { key: "€ 500", value: "500" },
+      ],
+    },
+    {
+      name: "Indian Rupee",
+      code: "INR",
+      symbol: "₹",
+      vals: [
+        { key: "₹ 500", value: "500" },
+        { key: "₹ 1,500", value: "1500" },
+        { key: "₹ 4k", value: "4000" },
+        { key: "₹ 7.5k", value: "7500" },
+        { key: "₹ 12.5k", value: "12500" },
+        { key: "₹ 25k", value: "25000" },
+      ],
+    },
+    {
+      name: "Japanese Yen",
+      code: "JPY",
+      symbol: "¥",
+      vals: [
+        { key: "¥ 1,500", value: "1500" },
+        { key: "¥ 2.5k", value: "2500" },
+        { key: "¥ 5k", value: "5000" },
+        { key: "¥ 10k", value: "10000" },
+        { key: "¥ 25k", value: "25000" },
+        { key: "¥ 50k", value: "50000" },
+      ],
+    },
+    {
+      name: "Kuwaiti Dinar",
+      code: "KWD",
+      symbol: "ك.د",
+      vals: [
+        { key: "5", value: "5" },
+        { key: "10", value: "10" },
+        { key: "20", value: "20" },
+        { key: "30", value: "30" },
+        { key: "50", value: "50" },
+        { key: "100", value: "100" },
+      ],
+    },
+    {
+      name: "Pakistani Rupee",
+      code: "PKR",
+      symbol: "₨",
+      vals: [
+        { key: "Rs 2,000", value: "2000" },
+        { key: "Rs 5,000", value: "5000" },
+        { key: "Rs 15k", value: "15000" },
+        { key: "Rs 30k", value: "30000" },
+        { key: "Rs 50k", value: "50000" },
+        { key: "Rs 100k", value: "100000" },
+      ],
+    },
+    {
+      name: "Qatari Rial",
+      code: "QAR",
+      symbol: "ق.ر",
+      vals: [
+        { key: "25", value: "25" },
+        { key: "50", value: "50" },
+        { key: "100", value: "100" },
+        { key: "250", value: "250" },
+        { key: "500", value: "500" },
+        { key: "1,500", value: "1500" },
+      ],
+    },
+    {
+      name: "Singapore Dollar",
+      code: "SGD",
+      symbol: "$",
+      vals: [
+        { key: "$ 25", value: "25" },
+        { key: "$ 50", value: "50" },
+        { key: "$ 100", value: "100" },
+        { key: "$ 250", value: "250" },
+        { key: "$ 500", value: "500" },
+        { key: "$ 1,500", value: "1500" },
+      ],
+    },
+    {
+      name: "Sri Lankan Rupee",
+      code: "LKR",
+      symbol: "Rs",
+      vals: [
+        { key: "Rs 2,000", value: "2000" },
+        { key: "Rs 5,000", value: "5000" },
+        { key: "Rs 8,000", value: "8000" },
+        { key: "Rs 15k", value: "15000" },
+        { key: "Rs 30k", value: "30000" },
+        { key: "Rs 50k", value: "50000" },
+      ],
+    },
+    {
+      name: "Swiss Franc",
+      code: "CHF",
+      symbol: "CHf",
+      vals: [
+        { key: "5", value: "5" },
+        { key: "15", value: "15" },
+        { key: "25", value: "25" },
+        { key: "100", value: "100" },
+        { key: "200", value: "200" },
+        { key: "300", value: "300" },
+      ],
+    },
+    {
+      name: "United Arab Emirates Dirham",
+      code: "AED",
+      symbol: "إ.د",
+      vals: [
+        { key: "20", value: "20" },
+        { key: "50", value: "50" },
+        { key: "80", value: "80" },
+        { key: "150", value: "150" },
+        { key: "300", value: "300" },
+        { key: "500", value: "500" },
+      ],
+    },
+    {
+      name: "US Dollar",
+      code: "USD",
+      symbol: "$",
+      vals: [
+        { key: "$ 25", value: "25" },
+        { key: "$ 50", value: "50" },
+        { key: "$ 100", value: "100" },
+        { key: "$ 250", value: "250" },
+        { key: "$ 500", value: "500" },
+        { key: "$ 1,500", value: "1500" },
+      ],
+    },
   ];
 
   const [type, setType] = useState("one-time");
@@ -206,6 +219,11 @@ export const DonateComponent = () => {
   const handleCurrencySelect = (event) => {
     console.log(event.target.value);
     setCurrency(event.target.value);
+  };
+
+  const handleAmountFieldChange = (event) => {
+    console.log(event.target.value);
+    setvalue(event.target.value);
   };
 
   return (
@@ -256,35 +274,38 @@ export const DonateComponent = () => {
         </Typography>
 
         <FormControl>
-          <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
+            size="samll"
+            value={value}
+            sx={{ marginBottom: 4, marginX: 1.45, paddingRight: 0 }}
+            onChange={handleAmountFieldChange}
             startAdornment={
               <InputAdornment position="start">
-                {() => {
-                  let label = "LKR";
-                  currency_list.map((currObj) => {
-                    label = currObj.code === currency ? currObj.symbol : "LKR";
-                  });
-                  return label;
-                }}
+                {
+                  currency_list.find((currObj) =>
+                    currObj.code === currency ? currObj.symbol : null
+                  ).symbol
+                }
               </InputAdornment>
             }
-            label="Amount"
             endAdornment={
               <InputAdornment position="end">
-                <Select
-                  aria-label="currency"
+                <TextField
                   value={currency}
                   onChange={handleCurrencySelect}
                   edge="end"
                   defaultValue="LKR"
-                  native
+                  select
+                  display="flex"
+                  sx={{ width: "92px", border: 0 }}
                 >
                   {currency_list.map((currObj) => (
-                    <option>{currObj.code}</option>
+                    <MenuItem value={currObj.code}>
+                      {currObj.code} | {currObj.name}
+                    </MenuItem>
                   ))}
-                </Select>
+                </TextField>
               </InputAdornment>
             }
           />
@@ -305,95 +326,26 @@ export const DonateComponent = () => {
             rowGap: "10px",
           }}
         >
-          <ToggleButton
-            value="2000"
-            variant="outlined"
-            id={value === "2000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 2,000
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="5000"
-            variant="outlined"
-            id={value === "5000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 5,000
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="8000"
-            variant="outlined"
-            id={value === "8000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 8,000
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="12000"
-            variant="outlined"
-            id={value === "12000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 12k
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="15000"
-            variant="outlined"
-            id={value === "15000" ? "selected" : "normal"}
-            xs={4}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 15k
-          </ToggleButton>
-          <ToggleButton
-            item
-            value="20000"
-            variant="outlined"
-            id={value === "20000" ? "selected" : "normal"}
-            sx={{
-              paddingX: "10px",
-              width: "90px",
-              boxSizing: "border-box",
-              fontSize: "15px",
-            }}
-          >
-            Rs 20k
-          </ToggleButton>
+          {currency_list
+            .find((currObj) => (currObj.code === currency ? currObj : null))
+            .vals.map((obj) => (
+              <ToggleButton
+                item
+                value={obj.value}
+                variant="outlined"
+                id={value === obj.value ? "selected" : "normal"}
+                sx={{
+                  paddingX: "10px",
+                  width: "90px",
+                  boxSizing: "border-box",
+                  fontSize: "15px",
+                }}
+              >
+                {obj.key}
+              </ToggleButton>
+            ))}
         </ToggleButtonGroup>
+        
       </CardContent>
       <CardActions sx={{ justifyContent: "center" }}>
         <Button

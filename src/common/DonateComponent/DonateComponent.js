@@ -363,6 +363,7 @@ export const DonateComponent = () => {
             backgroundColor: "#4C3B2BF0",
             color: "#F6EDE4",
             marginY: "10px",
+            marginBottom: "20px",
           }}
           id="donate-comp-btn"
         >

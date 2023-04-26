@@ -227,7 +227,7 @@ export const DonateComponent = () => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }} elevation="5">
+    <Card sx={{ maxWidth: 345 }}>
       <CardContent>
         {/* Button group for donation type */}
         <ToggleButtonGroup
@@ -279,7 +279,12 @@ export const DonateComponent = () => {
             id="outlined-adornment-amount"
             size="samll"
             value={value}
-            sx={{ marginBottom: 4, marginX: 1.45, paddingRight: 0, fontSize: 16 }}
+            sx={{
+              marginBottom: 4,
+              marginX: 1.45,
+              paddingRight: 0,
+              fontSize: 16,
+            }}
             onChange={handleAmountFieldChange}
             startAdornment={
               <InputAdornment position="start">
@@ -358,7 +363,6 @@ export const DonateComponent = () => {
             backgroundColor: "#4C3B2BF0",
             color: "#F6EDE4",
             marginY: "10px",
-            marginBottom: "20px",
           }}
           id="donate-comp-btn"
         >

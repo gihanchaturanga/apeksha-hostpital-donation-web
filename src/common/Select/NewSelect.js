@@ -28,7 +28,7 @@ export default function NewSelect(props) {
                 name={props.name}
                 value={value}
                 id={props.id}
-                onChange={handleChange}
+                onChange={props.handleChange || handleChange}
                 native
                 variant='outlined'
                 defaultValue={props.defaultValue}

@@ -40,7 +40,7 @@ export default function MasonryImageList() {
       <Box sx={{ overflowY: "scroll", paddingLeft: 2, paddingRight: 2 }}>
         <ImageList variant="masonry" cols={3}>
           {itemData.map((item) =>
-            item.collection === id ? (
+            item.collection == id ? (
               <ImageListItem key={item.img}>
                 <img
                   src={`${item.img}?w=248&fit=crop&auto=format`}

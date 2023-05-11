@@ -1,0 +1,12 @@
+#donate-pop-close-btn:hover {
+    background-color: #F6EDE4;
+}
+
+@media (max-width: 850px) {
+    .donate-pop-container {
+        flex-direction: column;
+    }
+    .donate-pop-card {
+        width: 345px;
+    }
+}

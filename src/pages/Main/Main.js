@@ -5,8 +5,19 @@ import { Button, Grid } from "@mui/material";
 import { Footer } from "../../common/Footer/Footer";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import { DonateComponent } from "../../common/DonateComponent/DonateComponent";
+import { DonatePopup } from "../../common/DonatePopup/DonatePopup";
 
 function RenderHome() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleChange = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div>
       <div container direction="column" className="main-outer-container">
@@ -21,6 +32,7 @@ function RenderHome() {
               variant="outlined"
               startIcon={<VolunteerActivismIcon />}
               id="donate-btn"
+              onClick={handleChange}
             >
               DONATE
             </Button>
@@ -30,10 +42,10 @@ function RenderHome() {
 
       <Grid className="main-page-card-wrpper">
         <center>
-          <DonateComponent/>
+          <DonateComponent />
         </center>
       </Grid>
-
+      <DonatePopup open={open} onClose={handleClose} />
       <Footer />
     </div>
   );

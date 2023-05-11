@@ -1,6 +1,5 @@
 import React from "react";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -9,14 +8,19 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { DonateComponent } from "../DonateComponent/DonateComponent";
 import CloseIcon from "@mui/icons-material/Close";
-import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import "./DonatePopup.css";
 import img from "../../resources/images/card1.jpg";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material";
 
 export const DonatePopup = (props) => {
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Dialog
+      fullScreen={fullScreen}
       maxWidth="md"
       open={props.open}
       onClose={props.onClose}
@@ -35,7 +39,7 @@ export const DonatePopup = (props) => {
       <DialogContent>
         <Grid
           display="flex"
-          className="donate-pop-container"
+          id="donate-pop-container"
           sx={{
             justifyContent: "center",
             margin: "auto",
@@ -43,7 +47,11 @@ export const DonatePopup = (props) => {
           }}
         >
           <Grid margin={1}>
-            <Card sx={{ maxWidth: 400, minWidth: 345 }} className="donate-pop-card">
+            <Card
+              sx={{ maxWidth: 400, minWidth: 325 }}
+              className="donate-pop-card"
+              elevation={5}
+            >
               <CardMedia component="img" height="230" image={img} alt="image" />
               <CardContent>
                 <Typography

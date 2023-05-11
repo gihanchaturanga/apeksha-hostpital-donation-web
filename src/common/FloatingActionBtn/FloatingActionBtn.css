@@ -1,0 +1,31 @@
+.global-action-btn-container {
+    position: fixed;
+    bottom: 10%;
+    right: 0%;
+}
+
+#global-action-btn:hover {
+    background-color: #F6EDE4;
+    color: #ec644b;
+}
+
+#global-action-btn-mobile {
+    background-color: #F6EDE4;
+    color: #ec644b;
+}
+
+@media (max-width: 600px) {
+    #global-action-btn {
+        display: none;
+    }
+    .global-action-btn-container {
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+    }
+}
+@media (min-width: 600px) {
+    #global-action-btn-mobile {
+        display: none;
+    }
+}

@@ -227,7 +227,7 @@ export const DonateComponent = () => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 325, minWidth: 315 }} elevation={5}>
       <CardContent>
         {/* Button group for donation type */}
         <ToggleButtonGroup

@@ -16,3 +16,9 @@
     outline: 2px solid;
     outline-offset: -2px;
 }
+
+@media (max-width: 330px) {
+    #donate-comp-btn {
+        margin-inline: 5px;
+    }
+}

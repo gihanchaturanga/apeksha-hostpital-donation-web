@@ -3,10 +3,17 @@
 }
 
 @media (max-width: 850px) {
-    .donate-pop-container {
+    #donate-pop-container {
+        display: flex;
         flex-direction: column;
     }
     .donate-pop-card {
-        width: 345px;
+        width: 325px;
+    }
+}
+
+@media (max-width: 330px) {
+    .donate-pop-card {
+        padding-inline: 5px;
     }
 }

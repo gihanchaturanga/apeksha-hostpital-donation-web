@@ -53,3 +53,12 @@
         padding: 0%;
     }
 }
+
+@media (max-width: 900px) {
+    .main-page-card-wrpper {
+        height: 200vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

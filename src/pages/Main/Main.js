@@ -42,14 +42,14 @@ function RenderHome() {
       </div>
 
       <Grid container className="main-page-card-wrpper">
-        <Grid item md={7} xs={12}>
+        <Grid item md={7} xs={10}>
           <Typography
             variant="h3"
             component="div"
             sx={{
               mr: 2,
               mb: 5,
-              display: { xs: "none", md: "flex" },
+              mt: 5,
               fontFamily: "ItimBold",
               fontWeight: 900,
               color: "inherit",
@@ -63,7 +63,6 @@ function RenderHome() {
             component="div"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
               fontFamily: "ItimBold",
               color: "inherit",
               fontSize: 20,

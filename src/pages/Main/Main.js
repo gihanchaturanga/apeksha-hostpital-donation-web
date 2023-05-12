@@ -66,7 +66,7 @@ function RenderHome() {
               display: { xs: "none", md: "flex" },
               fontFamily: "ItimBold",
               color: "inherit",
-              fontSize: 20
+              fontSize: 20,
             }}
           >
             We at Humaniti have been working hard to put an end to this. Every
@@ -76,6 +76,7 @@ function RenderHome() {
             water. We provide support by building wells & water pumps,
             distributing water tanks, & more.
           </Typography>
+          <br />
           <Typography
             variant="p"
             component="div"
@@ -84,7 +85,7 @@ function RenderHome() {
               display: { xs: "none", md: "flex" },
               fontFamily: "ItimBold",
               color: "inherit",
-              fontSize: 20
+              fontSize: 20,
             }}
           >
             We at Humaniti feel a responsibility to our brothers and sisters in

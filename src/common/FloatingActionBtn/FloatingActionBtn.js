@@ -33,7 +33,7 @@ export const FloatingActionBtn = () => {
         }}
         onClick={handleChange}
       >
-        <FavoriteIcon sx={{ mr: 1 }} />
+        <FavoriteIcon sx={{ mr: 1 }} className="floating-btn-icon"/>
         Donate
       </Button>
 
@@ -43,7 +43,7 @@ export const FloatingActionBtn = () => {
         sx={{ color: "white", backgroundColor: "#ec644b" }}
         onClick={handleChange}
       >
-        <FavoriteIcon />
+        <FavoriteIcon  className="floating-btn-icon"/>
       </Fab>
 
       <DonatePopup open={open} onClose={handleClose} />

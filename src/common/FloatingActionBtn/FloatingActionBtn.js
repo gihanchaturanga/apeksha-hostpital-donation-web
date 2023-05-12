@@ -29,6 +29,7 @@ export const FloatingActionBtn = () => {
           backgroundColor: "#ec644b",
           color: "white",
           height: "60px",
+          width:'120px',
           fontWeight: "bolder",
         }}
         onClick={handleChange}

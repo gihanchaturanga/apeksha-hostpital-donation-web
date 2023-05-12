@@ -25,6 +25,12 @@
     animation-iteration-count: infinite;
 }
 
+.floating-btn-icon:hover {
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
 @media (max-width: 900px) {
     #global-action-btn {
         display: none;
@@ -48,7 +54,11 @@
         padding: 0px;
     }
 
-    80% {
+    50% {
         padding: 3px;
+    }
+
+    100% {
+        padding: 0px;
     }
 }

@@ -16,7 +16,7 @@ import logo from "../../resources/logo/VolunteerSL(white).png";
 import "./TopNav.css";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 
-const pages = ["Campaigns", "Donate", "Gallery", "About Us"];
+const pages = ["Campaigns", "Gallery", "About Us"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {

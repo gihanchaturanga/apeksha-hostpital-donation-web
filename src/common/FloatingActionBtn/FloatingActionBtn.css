@@ -1,7 +1,12 @@
 .global-action-btn-container {
     position: fixed;
     bottom: 10%;
-    right: 0%;
+    right: -5%;
+}
+
+#global-action-btn {
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
 }
 
 #global-action-btn:hover {
@@ -18,12 +23,14 @@
     #global-action-btn {
         display: none;
     }
+
     .global-action-btn-container {
         position: fixed;
         bottom: 5%;
         right: 5%;
     }
 }
+
 @media (min-width: 600px) {
     #global-action-btn-mobile {
         display: none;

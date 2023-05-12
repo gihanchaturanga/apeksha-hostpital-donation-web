@@ -22,9 +22,9 @@ export const FloatingActionBtn = () => {
         variant="extended"
         id="global-action-btn"
         sx={{
-          borderTopRightRadius: "0px",
+          borderTopRightRadius: "10px",
           borderBottomRightRadius: "0px",
-          borderBottomLeftRadius: "10px",
+          borderBottomLeftRadius: "0px",
           borderTopLeftRadius: "10px",
           backgroundColor: "#ec644b",
           color: "white",

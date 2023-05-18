@@ -68,12 +68,12 @@ function RenderHome() {
               fontSize: 20,
             }}
           >
-            We at Humaniti have been working hard to put an end to this. Every
-            human being on the planet deserves access to clean water and basic
-            sanitation, which we take for granted. Humaniti’s NGO partners are
-            on the ground to give access to those who don't have clean drinking
-            water. We provide support by building wells & water pumps,
-            distributing water tanks, & more.
+            We at Volunteer Sri Lanka have been working hard to put an end to
+            medicine shortage. Every human being in Sri Lanka deserves access to
+            medicine and basic sanitation, which we take for granted. Humaniti’s
+            NGO partners are on the ground to give access to those who don't
+            have those. We provide support by providing medicinal supplies,
+            sanitary items, & more.
           </Typography>
           <br />
           <Typography
@@ -87,10 +87,10 @@ function RenderHome() {
               fontSize: 20,
             }}
           >
-            We at Humaniti feel a responsibility to our brothers and sisters in
-            need of clean safe water. But we need your help. Together, we can
-            work towards a world where everyone has access to clean water, no
-            matter the circumstance. Together, we can help. Will you help us?
+            We feel a responsibility to our brothers and sisters in need. But we
+            need your help. Together, we can work towards a country where
+            everyone has access to medicines, no matter the circumstance.
+            Together, we can help. Will you help us?
           </Typography>
         </Grid>
         <Grid item md={4} xs={12} display="flex" justifyContent="center">

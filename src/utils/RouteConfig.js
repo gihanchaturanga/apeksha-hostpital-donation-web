@@ -3,6 +3,7 @@ import RenderHome from '../pages/Main/Main'
 import { Login } from '../pages/Login/Login'
 import GalleryCategory from '../pages/Gallery/GalleryCategory'
 import Gallery from '../pages/Gallery/Gallery'
+import {AboutUs} from '../pages/AboutUs/AboutUs'
 import { PageNotFound } from './PageNotFound/PageNotFound'
 import Dashboard from '../Admin/Dashboard/Dashboard'
 
@@ -11,6 +12,7 @@ export const RouteConfig = () => {
     {path:"/", element: <RenderHome/>},
     {path:"/login", element: <Login/>},
     {path:"/gallery", element: <GalleryCategory/>},
+    {path:"/about us", element: <AboutUs/>},
     {path:"/gallery/:id/:title", element: <Gallery/>},
     {path: '/admin/dashboard', element: <Dashboard/>},
     {path:"*", element: <PageNotFound/>}

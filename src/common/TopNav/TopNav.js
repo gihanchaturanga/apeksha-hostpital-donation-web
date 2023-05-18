@@ -108,7 +108,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <MenuItem
                   key={page}
-                  onClick={() => handleNavClick(page.toLowerCase())}
+                  onClick={() => handleNavClick(page.toLowerCase().replace("\s",""))}
                 >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>

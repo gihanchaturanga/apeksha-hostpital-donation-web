@@ -85,7 +85,7 @@ export const Footer = () => {
                 Privacy Policy
               </Link>{" "}
               |{" "}
-              <Link to="" className="links">
+              <Link to="/about us" className="links">
                 About Us
               </Link>
               <br />

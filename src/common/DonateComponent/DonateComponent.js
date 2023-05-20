@@ -232,7 +232,6 @@ export const DonateComponent = () => {
   };
 
   const handleDonateToChange = (event) => {
-    console.log("Method Called!!");
     console.log(event.target.value);
     setDonateTo(event.target.value);
   };

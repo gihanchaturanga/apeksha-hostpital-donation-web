@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import Select from "@mui/material/Select";
+import Grid from "@mui/material/Grid";
 import {
   Button,
   CardActions,
@@ -202,9 +204,12 @@ export const DonateComponent = () => {
     },
   ];
 
+  let places = ["Apeksha hospital", "Elderly home"];
+
   const [type, setType] = useState("one-time");
   const [currency, setCurrency] = useState("LKR");
   const [value, setvalue] = useState("5000");
+  const [donateTo, setDonateTo] = useState("Apeksha hospital");
 
   const handleTypeChange = (event) => {
     setType(event.target.value);
@@ -224,6 +229,12 @@ export const DonateComponent = () => {
   const handleAmountFieldChange = (event) => {
     console.log(event.target.value);
     setvalue(event.target.value);
+  };
+
+  const handleDonateToChange = (event) => {
+    console.log("Method Called!!");
+    console.log(event.target.value);
+    setDonateTo(event.target.value);
   };
 
   return (
@@ -267,12 +278,29 @@ export const DonateComponent = () => {
           </ToggleButton>
         </ToggleButtonGroup>
 
-        <Typography
-          sx={{ fontSize: 18, marginTop: 6, marginBottom: 5 }}
-          color="text.secondary"
+        <Grid
+          display="flex"
+          flexDirection="row"
+          sx={{ marginTop: "52px", marginBottom: 4 }}
         >
-          Donate to Apeksha Cancer Hospital
-        </Typography>
+          <Typography
+            color="text.secondary"
+            sx={{ paddingTop: 0.3 }}
+          >
+            Donate to
+          </Typography>
+          <Select
+            value={donateTo}
+            onChange={handleDonateToChange}
+            variant="standard"
+            backgroundColor="white"
+            sx={{ fontSize: 15, marginLeft: 1 }}
+          >
+            {places.map((val) => (
+              <MenuItem value={val}>{val}</MenuItem>
+            ))}
+          </Select>
+        </Grid>
 
         <FormControl>
           <OutlinedInput
